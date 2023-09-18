@@ -1,4 +1,4 @@
-# Introduction
+# Well-Defined Application Architecture
 
 #### Are you tired of spending excessive time prototyping application setups?
 #### Do you feel confident that you're covering all essential aspects of a well-defined application architecture?

@@ -55,25 +55,12 @@ module.exports = {
         src: 'img/logo.png',
       },   
       items: [
-        // {
-        //   to: 'docs/index',
-        //   activeBasePath: 'docs/index',
-        //   label: 'Introduction',
-        //   position: 'left',
-        // },
         {
           type: 'doc',
-          docId: 'DevelopersGuide/Concept',
-          position: 'left',
-          label: "Developer's Guide",
-        },
-        {
-          type: 'doc',
-          docId: 'Documentation/concept',
+          docId: 'getting-started',
           position: 'left',
           label: 'Documentation',
         },
-        // { to: '/blog', label: 'Blog', position: 'left' },
         {
           href: 'https://github.com/wedaa-tech/wedaa-tech.github.io',
           //label: 'GitHub',
@@ -89,16 +76,12 @@ module.exports = {
           title: 'Docs',
           items: [
             {
-              label: "Developer's Guide",
-              to: 'DevelopersGuide/Concept',
+              label: "Getting Started",
+              to: 'getting-started',
             },
             {
-              label: 'Architecture',
-              to: 'documentation/concept',
-            },
-            {
-              label: 'Local Setup',
-              to: 'documentation/localsetup',
+              label: 'Guide',
+              to: 'guide/introduction',
             },
           ],
         },
@@ -111,7 +94,7 @@ module.exports = {
             // },
             {
               label: 'GitHub',
-              href: 'https://github.com/wedaa-tech/wedaa-tech.github.io',
+              href: 'https://github.com/wedaa-tech',
             },
             {
               label: 'Contact Us',
