@@ -21,5 +21,5 @@ In the above example you can see we generated a project with one service and wit
   <source src="./videos/knowmore.mp4" type="video/mp4"></source>
 </video>
 
-To know more and for detailed information of the options available you can refer [Documentation](/Documentation/MindMap/Introduction/)
+To know more and for detailed information of the options available you can refer [Documentation](/guide/introduction/)
 We hope you find the CanvasToCode intuitive and helpful for planning and visualizing your project architecture. If you have any further questions or need assistance, please don't hesitate to reach out. 
