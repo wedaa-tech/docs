@@ -2,7 +2,7 @@ module.exports = {
   title: 'WeDAA',
   tagline: 'Well-defined Application Architecture',
   url: 'https://wedaa.tech',
-  baseUrl: '/',
+  baseUrl: '/docs/',
   onBrokenLinks: 'throw',
   onBrokenMarkdownLinks: 'warn',
   favicon: 'img/logo.png',
