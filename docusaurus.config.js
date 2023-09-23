@@ -8,7 +8,7 @@ module.exports = {
   favicon: 'img/logo.png',
   organizationName: 'wedaa-tech',
   projectName: 'wedaa-tech.github.io',
-
+  staticDirectories: ['static'],
   themes: [
     // ... Your other themes.
     [
@@ -47,7 +47,6 @@ module.exports = {
 
   themeConfig: {
     image: 'img',
-    video: 'videos',
     navbar: {
       title: 'WeDAA',
       logo: {
