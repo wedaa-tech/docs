@@ -1,4 +1,4 @@
-# Well-Defined Application Architecture
+# What is WeDAA?
 
 #### Are you tired of spending excessive time prototyping application setups?
 #### Do you feel confident that you're covering all essential aspects of a well-defined application architecture?
@@ -11,4 +11,4 @@ With **WeDAA**, you can eliminate vendor lock-in worries. You're now equipped wi
 
 Say goodbye to time-consuming prototyping. Embrace **WeDAA**, your trusted companion for effortlessly prototyping well-architected, scalable full-stack applications, complete with automated deployment to the cloud infrastructure of your choice.    
 
-[Click here to explore!](http://www.wedaa.tech/)
+[Try now!](https://app.wedaa.tech/)

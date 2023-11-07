@@ -14,24 +14,37 @@
 /** @type {import('@docusaurus/plugin'ontent'ocs').SidebarsConfig} */
 const sidebars = {
   documentationSidebar: [
-    'getting-started',
     {
       type: 'category',
-      label: 'Guide',
+      label: 'Introduction',
       items: [
-        'guide/introduction',
-        'guide/prerequisites',
-        'guide/ui-gateway',
-        'guide/service-node',
-        'guide/global-configurations',
-        'guide/project-structure',
+        'introduction/what-is-wedaa',
       ],
     },
     {
       type: 'category',
-      label: 'Advanced',
+      label: 'Get Started',
       items: [
-        'advanced/architecture',
+        'get-started/quickstart',
+        'get-started/tutorials',
+      ],
+    },
+    {
+      type: 'category',
+      label: 'Developers\' Guide',
+      items: [
+        'developers-guide/prerequisites',
+        'developers-guide/ui-gateway',
+        'developers-guide/service-node',
+        'developers-guide/global-configurations',
+        'developers-guide/project-structure',
+      ],
+    },
+    {
+      type: 'category',
+      label: 'Core Architecture',
+      items: [
+        'core-architecture/architecture',
       ],
     },
   ],
