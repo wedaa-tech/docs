@@ -31,6 +31,27 @@ const sidebars = {
     },
     {
       type: 'category',
+      label: 'Components',
+      items: [
+        'components/react',
+      ],
+    },
+    {
+      type: 'category',
+      label: 'Reference Architectures',
+      items: [
+        'reference-architectures/ui-backend',
+      ],
+    },
+    {
+      type: 'category',
+      label: 'Featured Applications',
+      items: [
+        'featured-applications/full-stack',
+      ],
+    },
+    {
+      type: 'category',
       label: 'Developers\' Guide',
       items: [
         'developers-guide/prerequisites',
@@ -42,9 +63,30 @@ const sidebars = {
     },
     {
       type: 'category',
+      label: 'Deployment',
+      items: [
+        'deployment/azure',
+      ],
+    },
+    {
+      type: 'category',
       label: 'Core Architecture',
       items: [
         'core-architecture/architecture',
+      ],
+    },
+    {
+      type: 'category',
+      label: 'Troubleshooting',
+      items: [
+        'troubleshooting/local-setup',
+      ],
+    },
+    {
+      type: 'category',
+      label: 'Products',
+      items: [
+        'products/sample',
       ],
     },
   ],
