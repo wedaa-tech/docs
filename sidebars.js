@@ -17,6 +17,9 @@ const sidebars = {
     {
       type: 'category',
       label: 'Introduction',
+      link: {
+        type: 'generated-index',
+      },
       items: [
         'introduction/what-is-wedaa',
       ],
@@ -24,6 +27,9 @@ const sidebars = {
     {
       type: 'category',
       label: 'Get Started',
+      link: {
+        type: 'generated-index',
+      },
       items: [
         'get-started/quickstart',
         'get-started/tutorials',
@@ -32,6 +38,9 @@ const sidebars = {
     {
       type: 'category',
       label: 'Components',
+      link: {
+        type: 'generated-index',
+      },
       items: [
         'components/react',
       ],
@@ -39,6 +48,9 @@ const sidebars = {
     {
       type: 'category',
       label: 'Reference Architectures',
+      link: {
+        type: 'generated-index',
+      },
       items: [
         'reference-architectures/ui-backend',
       ],
@@ -46,6 +58,9 @@ const sidebars = {
     {
       type: 'category',
       label: 'Featured Applications',
+      link: {
+        type: 'generated-index',
+      },
       items: [
         'featured-applications/full-stack',
       ],
@@ -53,6 +68,9 @@ const sidebars = {
     {
       type: 'category',
       label: 'Developers\' Guide',
+      link: {
+        type: 'generated-index',
+      },
       items: [
         'developers-guide/prerequisites',
         'developers-guide/ui-gateway',
@@ -64,6 +82,9 @@ const sidebars = {
     {
       type: 'category',
       label: 'Deployment',
+      link: {
+        type: 'generated-index',
+      },
       items: [
         'deployment/azure',
       ],
@@ -71,6 +92,9 @@ const sidebars = {
     {
       type: 'category',
       label: 'Core Architecture',
+      link: {
+        type: 'generated-index',
+      },
       items: [
         'core-architecture/architecture',
       ],
@@ -78,6 +102,9 @@ const sidebars = {
     {
       type: 'category',
       label: 'Troubleshooting',
+      link: {
+        type: 'generated-index',
+      },
       items: [
         'troubleshooting/local-setup',
       ],
@@ -85,6 +112,9 @@ const sidebars = {
     {
       type: 'category',
       label: 'Products',
+      link: {
+        type: 'generated-index',
+      },
       items: [
         'products/sample',
       ],
