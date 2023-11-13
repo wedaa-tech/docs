@@ -2,13 +2,9 @@ import React from 'react';
 import Link from '@docusaurus/Link';
 
 import styles from './styles.module.css';
-import Author from '../Author';
 
 const ListItem = ({ content }) => {
   const { frontMatter, metadata } = content;
-
-  const { authors, author, author_title, author_url, author_image_url } =
-    frontMatter;
 
   const imageUrl = frontMatter.image ?? '/img/default-blog-post-banner.png';
 
@@ -31,13 +27,6 @@ const ListItem = ({ content }) => {
               <Link to={metadata.permalink}>
                 <h3 className={styles.title}>{metadata.title}</h3>
               </Link>
-              <Author
-                authors={authors}
-                name={author}
-                title={author_title}
-                url={author_url}
-                image={author_image_url}
-              />
             </div>
           </div>
         </div>

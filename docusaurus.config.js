@@ -34,6 +34,9 @@ module.exports = {
           sidebarPath: require.resolve('./sidebars.js'),
           routeBasePath: '/', // Serve the docs at the site's root
         },
+        blog: {
+          blogDescription: "Dive into our Full Stack Prototyping Platform Blog. Discover insights, tips, and best practices for crafting seamless and scalable applications from concept to reality."
+        },
         theme: {
           customCss: require.resolve('./src/css/custom.css'),
         },
