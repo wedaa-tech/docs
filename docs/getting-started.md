@@ -3,7 +3,7 @@ Welcome to the CanvasToCode! It's a powerful tool for planning your project arch
 
 ## Accessing CanvasToCode
 <video controls width="900" height="600">
-  <source src="/docs/videos/getting-started.mp4" type="video/mp4"></source>
+  <source src="/videos/getting-started.mp4" type="video/mp4"></source>
 </video>
 
 To get started, visit our website by [Clicking here](https://app.wedaa.tech). You can access the CanvasToCode from the navigation bar and also from CanvasToCode button on home page.
