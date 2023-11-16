@@ -2,7 +2,7 @@ module.exports = {
   title: 'WeDAA',
   tagline: 'Well-defined Application Architecture',
   url: 'https://wedaa.tech',
-  baseUrl: '/',
+  baseUrl: '/docs/',
   onBrokenLinks: 'throw',
   onBrokenMarkdownLinks: 'warn',
   favicon: 'img/logo.png',
@@ -32,11 +32,10 @@ module.exports = {
       {
         docs: {
           sidebarPath: require.resolve('./sidebars.js'),
-          routeBasePath: '/docs', // Serve the docs at the site's root
+          routeBasePath: '/', // Serve the docs at the site's root
         },
         blog: {
-          blogDescription: "Dive into our Full Stack Prototyping Platform Blog. Discover insights, tips, and best practices for crafting seamless and scalable applications from concept to reality.",
-          routeBasePath: '/blog',
+          blogDescription: "Dive into our Full Stack Prototyping Platform Blog. Discover insights, tips, and best practices for crafting seamless and scalable applications from concept to reality."
         },
         theme: {
           customCss: require.resolve('./src/css/custom.css'),
@@ -56,7 +55,6 @@ module.exports = {
       logo: {
         alt: 'WeDAA Logo',
         src: 'img/logo.png',
-        href: '/docs'
       },   
       items: [
         {
@@ -86,11 +84,11 @@ module.exports = {
           items: [
             {
               label: "Getting Started",
-              to: 'docs/getting-started',
+              to: 'getting-started',
             },
             {
               label: 'Guide',
-              to: 'docs/guide/introduction',
+              to: 'guide/introduction',
             },
           ],
         },
