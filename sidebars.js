@@ -32,6 +32,7 @@ const sidebars = {
       },
       items: [
         'get-started/quickstart',
+        'get-started/advance',
         'get-started/tutorials',
       ],
     },

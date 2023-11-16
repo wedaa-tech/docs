@@ -1,3 +1,4 @@
+# What is WeDAA ?
 
 #### ⚡️ Platform engineered to build rapid application prototypes.
 #### ⚡️ Platform for composing Well-Defines Application Architecture(WeDAA).
@@ -16,6 +17,8 @@
 
 
 Say goodbye to time-consuming prototyping. Embrace **WeDAA**, your trusted companion for effortlessly prototyping well-architected, scalable full-stack applications, powered with automated deployment to the cloud infrastructure of your choice.    
+
+![WeDAA Architecture](/img/wedaa_workflow.png)
 
 #### Draw Application Architecture --> Generate Code --> Deploy to Cloud --> Run Application
 
