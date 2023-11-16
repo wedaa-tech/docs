@@ -44,6 +44,15 @@ const sidebars = {
       },
       items: [
         'components/react',
+        'components/angular',
+        'components/docusaurus',
+        'components/spring_framework',
+        'components/go_micro',
+        'components/keycloak',
+        'components/gateway',
+        'components/postgres',
+        'components/mongo',
+        'components/elastic',
       ],
     },
     {
