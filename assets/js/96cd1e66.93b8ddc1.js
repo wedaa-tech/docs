@@ -1,1 +1,0 @@
-"use strict";(self.webpackChunkdocusaurus_documentation=self.webpackChunkdocusaurus_documentation||[]).push([[971],{6442:o=>{o.exports=JSON.parse('[{"label":"prototyping","permalink":"/docs/blog/tags/prototyping","count":1},{"label":"boilerplate","permalink":"/docs/blog/tags/boilerplate","count":1}]')}}]);

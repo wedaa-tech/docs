@@ -1,16 +1,16 @@
 <?xml version="1.0" encoding="utf-8"?>
 <feed xmlns="http://www.w3.org/2005/Atom">
-    <id>https://wedaa.tech/docs/blog</id>
+    <id>https://wedaa.tech/blog</id>
     <title>WeDAA Blog</title>
     <updated>2023-11-11T00:00:00.000Z</updated>
     <generator>https://github.com/jpmonette/feed</generator>
-    <link rel="alternate" href="https://wedaa.tech/docs/blog"/>
+    <link rel="alternate" href="https://wedaa.tech/blog"/>
     <subtitle>WeDAA Blog</subtitle>
-    <icon>https://wedaa.tech/docs/img/logo.png</icon>
+    <icon>https://wedaa.tech/img/logo.png</icon>
     <entry>
         <title type="html"><![CDATA[Transitioning from Boilerplate Development to Scaffolding Frameworks]]></title>
-        <id>https://wedaa.tech/docs/blog/first-blog-post</id>
-        <link href="https://wedaa.tech/docs/blog/first-blog-post"/>
+        <id>https://wedaa.tech/blog/first-blog-post</id>
+        <link href="https://wedaa.tech/blog/first-blog-post"/>
         <updated>2023-11-11T00:00:00.000Z</updated>
         <summary type="html"><![CDATA[In our ever-evolving tech landscape, we continually encounter new tools and technologies for constructing common software structures. With technology's daily progress, we witness fresh parameters and approaches applied to our existing setups.]]></summary>
         <content type="html"><![CDATA[<p>In our ever-evolving tech landscape, we continually encounter new tools and technologies for constructing common software structures. With technology's daily progress, we witness fresh parameters and approaches applied to our existing setups.</p><p>To draw a parallel, consider the preparation of a delectable Biryani. The first step is to gather the right ingredients before diving into cooking. Spices, curd, salt, rice, and, of course, gasoline are essential. Most of these ingredients remain constant for everyone, while the art of cooking is what distinguishes one chef from another. Given that the ingredients remain the same, isn't it impractical to painstakingly prepare them from scratch each time we crave Biryani? It certainly is.</p><p>In contrast to the culinary world, in software engineering, we often find ourselves writing and configuring all components from scratch each time we embark on building a software solution.</p><p>Let's consider a hypothetical scenario in software engineering: creating a full-stack application. It entails the development of numerous microservices, handling discovery, gateway, and inter-service communication. Additionally, we must set up logging, observability, security, and privacy mechanisms. Now, ponder this: countless others have undertaken these exact same tasks tens of thousands of times. Isn't it time to rethink our approach and prepare and assemble common technical components in advance, much like having essential spices ready when cooking Biryani.</p><p>Starting from scratch each time leads to complications, extended development timelines, and monotony. As a software project expands and requires more boilerplate code, a developer's workload becomes increasingly burdensome. We must simultaneously ensure a solid foundation for our application's architecture. So, the question arises: where do we seek a solution? The answer lies in a scaffolding platform, where we build common components once and assemble them as needed.</p><p>Scaffolding represents a modern approach to generating the common building blocks of an application and configuring them to meet the software requirements. An effective scaffold might encompass features such as login and registration pages, service and server connections, routing, discovery, model templates, controllers, security, privacy, and observability mechanisms.</p><p>The next time you embark on application development, consider WeDAA, a platform designed for rapid prototyping and scaffolding of technologies and applications.</p><p>What You'll Achieve:</p><p>Expedited proposal development.
