@@ -1,7 +1,7 @@
 ---
 slug: first-blog-post
 title: Transitioning from Boilerplate Development to Scaffolding Frameworks
-image: img/first-blog-post.png
+image: https://www.wedaa.tech/docs/img/first-blog-post.png
 tags: [prototyping, boilerplate]
 ---
 
