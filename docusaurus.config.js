@@ -86,11 +86,11 @@ module.exports = {
           items: [
             {
               label: "Getting Started",
-              to: 'getting-started',
+              to: 'docs/getting-started',
             },
             {
               label: 'Guide',
-              to: 'guide/introduction',
+              to: 'docs/guide/introduction',
             },
           ],
         },

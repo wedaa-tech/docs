@@ -10,5 +10,5 @@ To get started, visit our website by [Clicking here](https://app.wedaa.tech). Yo
 
 In the above example you can see we generated a project with one service and without infrastructure. In the same way, you can generate your's based on your requirement.
 
-To know more and for detailed information of the options available you can refer [Guide](/guide/introduction/).
+To know more and for detailed information of the options available you can refer [Guide](/docs/guide/introduction/).
 We hope you find the CanvasToCode intuitive and helpful for planning and visualizing your project architecture. If you have any further questions or need assistance, please don't hesitate to reach out.
