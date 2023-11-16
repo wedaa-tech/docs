@@ -9,18 +9,22 @@
 
 
 **Use **WeDAA** if:**
-- :white_check_mark: You aim to rapidly create a prototype for a modern-day full-stack application.
+- :white_check_mark: You aim to rapidly build a prototype for modern-day full-stack application.
 - :white_check_mark: You want an application built with comprehensive architecture.
-- :white_check_mark: You desire to construct, generate, and download code for a reference application 
-- :white_check_mark: You seek code and applications built without any dependency or vendor lock-in.
-- :white_check_mark: You seek to rapidly develop a prototype for a cloud-native application utilizing Kubernetes as its orchestration platform.
+- :white_check_mark: You desire to generate and own code of a reference application. 
+- :white_check_mark: Looking for NO vendor lock-in.
+- :white_check_mark: You seek to rapidly prototype a cloud-native application ready to deploy on cloud infrastructure of your choice.
+- :white_check_mark: YYou wish to empower your architecture that utilizes Kubernetes as its orchestration platform.
 
 
-Say goodbye to time-consuming prototyping. Embrace **WeDAA**, your trusted companion for effortlessly prototyping well-architected, scalable full-stack applications, powered with automated deployment to the cloud infrastructure of your choice.    
 
-![WeDAA Architecture](/img/wedaa_workflow.png)
+**Application prototyping journey on **WeDAA   
+![WeDAA Workflow](/img/wedaa_app_workflow.png)
 
-#### Draw Application Architecture --> Generate Code --> Deploy to Cloud --> Run Application
+Embrace **WeDAA** and say goodbye to time-consuming prototyping. Prototype your well-architected, scalable full-stack applications with lightning speed. 
+Prototypes build with **WeDAA** are powered with automated deployment to the cloud infrastructure of your choice. 
+
+![WeDAA Power](/img/wedaa_power.png)
 
 #### 💥 Embrace WeDAA? [Get Started!](https://app.wedaa.tech/)
 
