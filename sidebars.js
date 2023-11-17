@@ -62,7 +62,13 @@ const sidebars = {
         type: 'generated-index',
       },
       items: [
-        'reference-architectures/ui-backend',
+        'reference-architectures/react-java-fullstack',
+        'reference-architectures/react-go-fullstack',
+        'reference-architectures/ployglot-fullstack',
+        'reference-architectures/keycloak-authentication',
+        'reference-architectures/java-elk-fullstack',
+        'reference-architectures/headless',
+        'reference-architectures/comprehensive-microservices',
       ],
     },
     {
@@ -73,6 +79,8 @@ const sidebars = {
       },
       items: [
         'featured-applications/full-stack',
+        'featured-applications/notes',
+        'featured-applications/personal-profile',
       ],
     },
     {
@@ -97,6 +105,7 @@ const sidebars = {
       },
       items: [
         'deployment/azure',
+        'deployment/aws',
       ],
     },
     {
