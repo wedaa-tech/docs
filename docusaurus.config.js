@@ -55,11 +55,12 @@ module.exports = {
       logo: {
         alt: 'WeDAA Logo',
         src: 'img/logo.png',
+        href: '/introduction/what-is-wedaa'
       },   
       items: [
         {
           type: 'doc',
-          docId: 'getting-started',
+          docId: 'introduction/what-is-wedaa',
           position: 'left',
           label: 'Documentation',
         },
@@ -84,11 +85,11 @@ module.exports = {
           items: [
             {
               label: "Getting Started",
-              to: 'getting-started',
+              to: 'get-started/quickstart',
             },
             {
               label: 'Guide',
-              to: 'guide/introduction',
+              to: 'developers-guide/introduction',
             },
           ],
         },

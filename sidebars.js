@@ -14,24 +14,126 @@
 /** @type {import('@docusaurus/plugin'ontent'ocs').SidebarsConfig} */
 const sidebars = {
   documentationSidebar: [
-    'getting-started',
     {
       type: 'category',
-      label: 'Guide',
+      label: 'Introduction',
+      link: {
+        type: 'generated-index',
+      },
       items: [
-        'guide/introduction',
-        'guide/prerequisites',
-        'guide/ui-gateway',
-        'guide/service-node',
-        'guide/global-configurations',
-        'guide/project-structure',
+        'introduction/what-is-wedaa',
       ],
     },
     {
       type: 'category',
-      label: 'Advanced',
+      label: 'Get Started',
+      link: {
+        type: 'generated-index',
+      },
       items: [
-        'advanced/architecture',
+        'get-started/quickstart',
+        'get-started/advance',
+        'get-started/tutorials',
+      ],
+    },
+    {
+      type: 'category',
+      label: 'Components',
+      link: {
+        type: 'generated-index',
+      },
+      items: [
+        'components/user_interface',
+        'components/backend',
+        'components/gateway',
+        'components/service_discovery',
+        'components/keycloak',
+        'components/persistence',
+        'components/docusaurus',
+        'components/elastic',
+      ],
+    },
+    {
+      type: 'category',
+      label: 'Reference Architectures',
+      link: {
+        type: 'generated-index',
+      },
+      items: [
+        'reference-architectures/react-java-fullstack',
+        'reference-architectures/react-go-fullstack',
+        'reference-architectures/ployglot-fullstack',
+        'reference-architectures/keycloak-authentication',
+        'reference-architectures/java-elk-fullstack',
+        'reference-architectures/headless',
+        'reference-architectures/comprehensive-microservices',
+      ],
+    },
+    {
+      type: 'category',
+      label: 'Featured Applications',
+      link: {
+        type: 'generated-index',
+      },
+      items: [
+        'featured-applications/full-stack',
+        'featured-applications/notes',
+        'featured-applications/personal-profile',
+      ],
+    },
+    {
+      type: 'category',
+      label: 'Developers\' Guide',
+      link: {
+        type: 'generated-index',
+      },
+      items: [
+        'developers-guide/prerequisites',
+        'developers-guide/ui-gateway',
+        'developers-guide/service-node',
+        'developers-guide/global-configurations',
+        'developers-guide/project-structure',
+      ],
+    },
+    {
+      type: 'category',
+      label: 'Deployment',
+      link: {
+        type: 'generated-index',
+      },
+      items: [
+        'deployment/azure',
+        'deployment/aws',
+      ],
+    },
+    {
+      type: 'category',
+      label: 'Core Architecture',
+      link: {
+        type: 'generated-index',
+      },
+      items: [
+        'core-architecture/architecture',
+      ],
+    },
+    {
+      type: 'category',
+      label: 'Troubleshooting',
+      link: {
+        type: 'generated-index',
+      },
+      items: [
+        'troubleshooting/local-setup',
+      ],
+    },
+    {
+      type: 'category',
+      label: 'Products',
+      link: {
+        type: 'generated-index',
+      },
+      items: [
+        'products/sample',
       ],
     },
   ],
