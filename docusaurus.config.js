@@ -50,6 +50,9 @@ module.exports = {
 
   themeConfig: {
     image: 'img',
+    metadata: [
+      { name: 'keywords', content: 'wedaa, prototyping, cloud native, comprehensive architectures' }
+    ],
     navbar: {
       title: 'WeDAA',
       logo: {

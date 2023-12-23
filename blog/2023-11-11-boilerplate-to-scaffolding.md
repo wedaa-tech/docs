@@ -1,8 +1,9 @@
 ---
-slug: first-blog-post
 title: Transitioning from Boilerplate Development to Scaffolding Frameworks
+description: Transitioning from Boilerplate Development to Scaffolding Frameworks
 image: https://www.wedaa.tech/docs/img/first-blog-post.png
 tags: [prototyping, boilerplate]
+date: 2023-11-11
 ---
 
 In our ever-evolving tech landscape, we continually encounter new tools and technologies for constructing common software structures. With technology's daily progress, we witness fresh parameters and approaches applied to our existing setups.
