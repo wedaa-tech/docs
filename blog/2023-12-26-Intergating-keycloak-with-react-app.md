@@ -42,7 +42,7 @@ In the fast-paced world of web development, prioritizing the security of our app
 
 
 
-WeDAA offers a pre-configured React application secured by Keycloak. Simply extract our application, follow the instructions in the README, and initiate your application to seamlessly experience it firsthand.
+WeDAA offers a pre-configured React application secured by Keycloak. Simply extract our application, follow the instructions in the README, and initiate your application to seamlessly experience it first-hand.
 
 ### 🧠 Understanding the Generated Code 
 
@@ -84,9 +84,9 @@ reportWebVitals();
 
 - The oidcConfig object contains configuration parameters required for OpenID Connect authentication.
 
-- Environment variables (REACT_APP_OIDC_AUTHORITY, REACT_APP_OIDC_CLIENT_ID, and REACT_APP_PROJECT_URL) are used to dynamically set these values.
+- Environment variables (```REACT_APP_OIDC_AUTHORITY, REACT_APP_OIDC_CLIENT_ID, and REACT_APP_PROJECT_URL```) are used to dynamically set these values.
 
-2. .env
+2. dotenv (.env file)
 
 ```jsx
 // Environment variables for configuring the React application.
