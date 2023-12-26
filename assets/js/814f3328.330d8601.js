@@ -1,0 +1,1 @@
+"use strict";(self.webpackChunkdocusaurus_documentation=self.webpackChunkdocusaurus_documentation||[]).push([[2535],{5641:e=>{e.exports=JSON.parse('{"title":"Recent posts","items":[{"title":"Transitioning from Boilerplate Development to Scaffolding Frameworks","permalink":"/docs/blog/2023/11/11/boilerplate-to-scaffolding","unlisted":false}]}')}}]);

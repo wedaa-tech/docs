@@ -1,0 +1,1 @@
+"use strict";(self.webpackChunkdocusaurus_documentation=self.webpackChunkdocusaurus_documentation||[]).push([[3743],{3510:s=>{s.exports=JSON.parse('{"label":"boilerplate","permalink":"/docs/blog/tags/boilerplate","allTagsPath":"/docs/blog/tags","count":1,"unlisted":false}')}}]);
