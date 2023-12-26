@@ -3,7 +3,7 @@ title: Securing React applications with Keycloak
 description: Intergating Keycloak with React app with "react-oidc-context"
 image: https://i.imgur.com/jtapJ0a.png
 tags: [keycloak, react, authentication, prototyping, boilerplate]
-date: 2023-12-25
+date: 2023-12-26
 ---
 
 In the fast-paced world of web development, prioritizing the security of our applications is paramount. This blog post takes you on a journey to enhance the security of your React app by seamlessly integrating it with [**Keycloak**](https://www.keycloak.org/documentation), a robust authentication and authorization server. To simplify this process, we'll leverage the npm package [**react-oidc-context**](https://www.npmjs.com/package/react-oidc-context), bridging React and Keycloak while implementing OpenID Connect (OIDC). Whether you're a seasoned developer or just stepping into React and authentication, this post provides practical insights to bolster the security posture of your web application. Let's dive into the world of React, Keycloak, and react-oidc-context for a more secure development experience.
@@ -194,11 +194,17 @@ npm start
 
 ### 📸 Example images in action
 
-1. Home page of the React application genrated via WeDAA.
+1. Home page of the React application generated via WeDAA.
 
-2. Login Page for the React application powered by keycloak (click on the sign in button to land on this page).
+   ![Home page](https://i.imgur.com/WPwAEL9.png)
+
+2. Login Page for the React application powered by keycloak (click on the sign in button to land on this page, by default two users are provided [user,admin]; password is same as username).
+
+   ![Login Page](https://i.imgur.com/betJU5z.png)
 
 3. Home page after sucessful Login.
+
+   ![Logged In Home page](https://i.imgur.com/RuRXzHs.png)
 
 ## ✨ Conclusion
 
