@@ -3,7 +3,7 @@
 **WeDAA** Is an open source platform for building modern full-stack application prototypes in **no time**. All the prototypes and code generated with **WeDAA** are equipeed with cloud native stack that can be deployed and run on any cloud infrastructure. 
 **WeDAA** Empowers you to draw comprehensive application architecture via an intuitive visual canvas and seamlessly generates deployable source code upon completion.
 
-# In short WeDAA is A
+# In short WeDAA is a
 
 #### ⚡️ Platform engineered for instant Application prototyping and code generation.
 #### ⚡️ Platform for composing Well-Defined Application Architecture(WeDAA).
