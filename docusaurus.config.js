@@ -7,7 +7,8 @@ module.exports = {
   onBrokenMarkdownLinks: 'warn',
   favicon: 'img/logo.png',
   organizationName: 'wedaa-tech',
-  projectName: 'wedaa-tech.github.io',
+  projectName: 'docs',
+  trailingSlash: false,
   staticDirectories: ['static'],
   themes: [
     // ... Your other themes.
