@@ -8,11 +8,11 @@
     <subtitle>WeDAA Blog</subtitle>
     <icon>https://wedaa.tech/docs/img/logo.png</icon>
     <entry>
-        <title type="html"><![CDATA[Event driven Architectures with RabbitMQ]]></title>
+        <title type="html"><![CDATA[Build event driven Microservice Architectures with RabbitMQ]]></title>
         <id>https://wedaa.tech/docs/blog/2024/01/15/rabbitmq</id>
         <link href="https://wedaa.tech/docs/blog/2024/01/15/rabbitmq"/>
         <updated>2024-01-15T00:00:00.000Z</updated>
-        <summary type="html"><![CDATA[Build event driven Microservices Architectures with RabbitMQ]]></summary>
+        <summary type="html"><![CDATA[Build event driven Microservice Architectures with RabbitMQ]]></summary>
         <content type="html"><![CDATA[<h2 class="anchor anchorWithStickyNavbar_LWe7" id="the-story">The Story<a href="https://wedaa.tech/docs/blog/2024/01/15/rabbitmq#the-story" class="hash-link" aria-label="Direct link to The Story" title="Direct link to The Story">​</a></h2>
 <p><img loading="lazy" alt="Sample Message Broker App" src="https://wedaa.tech/docs/assets/images/message-brokers-app-ffb34699577c2083c49c9671356ac45b.png" width="3388" height="1408" class="img_ev3q"></p>
 <p>Imagine we're building a simple e-commerce application. When a customer places an order, it's not instantly whisked away by elves. Instead, the order details – a message filled with product information, shipping address, and payment details – gets sent to a queue managed by a message broker.</p>
