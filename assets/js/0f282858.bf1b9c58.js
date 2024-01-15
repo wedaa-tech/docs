@@ -1,0 +1,1 @@
+"use strict";(self.webpackChunkdocusaurus_documentation=self.webpackChunkdocusaurus_documentation||[]).push([[9944],{7707:s=>{s.exports=JSON.parse('{"label":"rabbitmq","permalink":"/docs/blog/tags/rabbitmq","allTagsPath":"/docs/blog/tags","count":1,"unlisted":false}')}}]);

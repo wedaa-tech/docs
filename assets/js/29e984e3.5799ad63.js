@@ -1,0 +1,1 @@
+"use strict";(self.webpackChunkdocusaurus_documentation=self.webpackChunkdocusaurus_documentation||[]).push([[895],{8997:s=>{s.exports=JSON.parse('{"label":"messagebrokers","permalink":"/docs/blog/tags/messagebrokers","allTagsPath":"/docs/blog/tags","count":1,"unlisted":false}')}}]);

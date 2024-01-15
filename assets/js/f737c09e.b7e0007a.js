@@ -1,0 +1,1 @@
+"use strict";(self.webpackChunkdocusaurus_documentation=self.webpackChunkdocusaurus_documentation||[]).push([[8684],{9474:e=>{e.exports=JSON.parse('{"label":"eventdriven","permalink":"/docs/blog/tags/eventdriven","allTagsPath":"/docs/blog/tags","count":1,"unlisted":false}')}}]);
