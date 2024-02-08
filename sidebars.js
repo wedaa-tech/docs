@@ -38,6 +38,21 @@ const sidebars = {
     },
     {
       type: 'category',
+      label: 'Developer Guide',
+      link: {
+        type: 'generated-index',
+      },
+      items: [
+        'developers-guide/prerequisites',
+        'developers-guide/ui-gateway',
+        'developers-guide/service-node',
+        'developers-guide/global-configurations',
+        'developers-guide/communication',
+        'developers-guide/project-structure',
+      ],
+    },
+    {
+      type: 'category',
       label: 'Components',
       link: {
         type: 'generated-index',
@@ -79,20 +94,6 @@ const sidebars = {
         'featured-applications/full-stack',
         'featured-applications/notes',
         'featured-applications/personal-profile',
-      ],
-    },
-    {
-      type: 'category',
-      label: 'Developers\' Guide',
-      link: {
-        type: 'generated-index',
-      },
-      items: [
-        'developers-guide/prerequisites',
-        'developers-guide/ui-gateway',
-        'developers-guide/service-node',
-        'developers-guide/global-configurations',
-        'developers-guide/project-structure',
       ],
     },
     {
