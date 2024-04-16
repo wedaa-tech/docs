@@ -124,4 +124,7 @@ General areas of application are:
 
 ## Conclusion
 
+
 In this overview, we've explored serverless computing with Knative on Kubernetes, covering core concepts, features, and components. Stay tuned for practical implementations and real-world use cases in upcoming blogs, unlocking Knative's full potential for your projects. With Knative, the future of serverless on Kubernetes is brighter than ever.
+
+Furthermore, I'm excited to announce that our platform, [WeDAA](https://app.wedaa.tech/), will be hosting these upcoming blogs. WeDAA is committed to providing innovative solutions, and soon, we'll be incorporating serverless capabilities into our platform. Keep an eye out for our future updates, as we continue to evolve and enhance our services to meet your needs.
