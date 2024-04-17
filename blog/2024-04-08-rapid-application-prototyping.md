@@ -1,7 +1,7 @@
 ---
 title: Rapid Application Prototyping (RAP)
 description: Rapid Application Prototyping (RAP)
-image: https://www.wedaa.tech/docs/img/blog/rap/banner.jpg
+image: https://www.wedaa.tech/docs/img/blog/rap/banner.png
 tags: [prototyping, architecture, bestpractices]
 date: 2024-04-08
 ---
