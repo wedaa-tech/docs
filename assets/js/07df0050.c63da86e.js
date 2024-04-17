@@ -1,1 +1,0 @@
-"use strict";(self.webpackChunkdocusaurus_documentation=self.webpackChunkdocusaurus_documentation||[]).push([[5552],{3356:s=>{s.exports=JSON.parse('{"label":"go","permalink":"/docs/blog/tags/go","allTagsPath":"/docs/blog/tags","count":1,"unlisted":false}')}}]);
