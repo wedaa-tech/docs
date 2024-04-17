@@ -4,10 +4,149 @@
         <title>WeDAA Blog</title>
         <link>https://wedaa.tech/docs/blog</link>
         <description>WeDAA Blog</description>
-        <lastBuildDate>Mon, 15 Jan 2024 00:00:00 GMT</lastBuildDate>
+        <lastBuildDate>Sat, 13 Apr 2024 00:00:00 GMT</lastBuildDate>
         <docs>https://validator.w3.org/feed/docs/rss2.html</docs>
         <generator>https://github.com/jpmonette/feed</generator>
         <language>en</language>
+        <item>
+            <title><![CDATA[Dive into Knative—Explore Serverless with Kubernetes]]></title>
+            <link>https://wedaa.tech/docs/blog/2024/04/13/overview-on-knative</link>
+            <guid>https://wedaa.tech/docs/blog/2024/04/13/overview-on-knative</guid>
+            <pubDate>Sat, 13 Apr 2024 00:00:00 GMT</pubDate>
+            <description><![CDATA[Overview on Knative]]></description>
+            <content:encoded><![CDATA[<h2 class="anchor anchorWithStickyNavbar_LWe7" id="what-is-serverless">What is serverless?<a href="https://wedaa.tech/docs/blog/2024/04/13/overview-on-knative#what-is-serverless" class="hash-link" aria-label="Direct link to What is serverless?" title="Direct link to What is serverless?">​</a></h2>
+<p>Serverless is a cloud-native development model that allows developers to build and run applications without having to manage servers.</p>
+<p>There are still servers in serverless, but they are abstracted away from app development. A cloud provider handles the routine work of provisioning, maintaining, and scaling the server infrastructure. Developers can simply package their code in containers for deployment.</p>
+<p>Once deployed, serverless apps respond to demand and automatically scale up and down as needed.</p>
+<h3 class="anchor anchorWithStickyNavbar_LWe7" id="serverless-computing-a-catering-service-analogy">Serverless Computing: A Catering Service Analogy<a href="https://wedaa.tech/docs/blog/2024/04/13/overview-on-knative#serverless-computing-a-catering-service-analogy" class="hash-link" aria-label="Direct link to Serverless Computing: A Catering Service Analogy" title="Direct link to Serverless Computing: A Catering Service Analogy">​</a></h3>
+<p><img loading="lazy" alt="Catering Service Analogy" src="https://wedaa.tech/docs/assets/images/01-catering-service-analogy-adaf44c7098d69ce237b4b79d9ce91c5.png" width="1480" height="722" class="img_ev3q"></p><p align="center"><a href="https://www.freepik.com/premium-vector/catering-concept-illustration-idea-food-service-hotel-event-restaurant-banquet-party-catering-service-web-banner-illustration_10275389.htm" target="_blank" rel="noopener noreferrer">Catering Service Analogy</a></p><p></p>
+<p>Imagine you're hosting a dinner party. In a traditional hosting scenario, you'd have to plan everything from cooking the food to setting the table and serving your guests. This is like managing servers in traditional computing – you have to handle all the details yourself.</p>
+<p>Now, consider a serverless approach as hiring a catering service for your party. You tell them what you need, and they take care of everything – from cooking the food to setting up and serving. You don't have to worry about the kitchen logistics or cleaning up afterward; you can focus on enjoying the party with your guests. Similarly, in serverless computing, you provide your code, and the cloud provider takes care of the infrastructure, scaling, and management, allowing you to focus on writing and improving your application.</p>
+<h3 class="anchor anchorWithStickyNavbar_LWe7" id="kubernetes-powered-serverless-introducing-knative">Kubernetes-Powered Serverless: Introducing Knative<a href="https://wedaa.tech/docs/blog/2024/04/13/overview-on-knative#kubernetes-powered-serverless-introducing-knative" class="hash-link" aria-label="Direct link to Kubernetes-Powered Serverless: Introducing Knative" title="Direct link to Kubernetes-Powered Serverless: Introducing Knative">​</a></h3>
+<p><img loading="lazy" alt="Serverless Framework Knative" src="https://wedaa.tech/docs/assets/images/02-serverless-framework-knative-257bb2f43332d877463ef0e79344d262.png" width="1895" height="849" class="img_ev3q"></p><p align="center"><a href="https://www.serverless.com/blog/serverless-framework-knative-component" target="_blank" rel="noopener noreferrer">Serverless Framework Knative</a></p><p></p>
+<p>In the rapidly evolving landscape of cloud computing, serverless technology has become increasingly popular for its simplicity in deploying applications without worrying about infrastructure. Knative, built on top of Kubernetes (k8s), extends the power of Kubernetes to manage serverless workloads seamlessly. While major cloud providers like AWS, Google Cloud, and Microsoft Azure offer their serverless solutions, Knative stands out as an open-source, platform-agnostic framework.</p>
+<p>Collaboratively developed by industry leaders like Google and Red Hat, Knative abstracts away the complexities of deploying, scaling, and managing containerized applications, allowing developers to focus solely on writing code without worrying about infrastructure management. Knative simplifies serverless deployments across diverse cloud environments, revolutionizing the way applications are developed and deployed in modern cloud-native architectures.</p>
+<h3 class="anchor anchorWithStickyNavbar_LWe7" id="exploring-knative-features-simplifying-serverless-deployment">Exploring Knative Features: Simplifying Serverless Deployment<a href="https://wedaa.tech/docs/blog/2024/04/13/overview-on-knative#exploring-knative-features-simplifying-serverless-deployment" class="hash-link" aria-label="Direct link to Exploring Knative Features: Simplifying Serverless Deployment" title="Direct link to Exploring Knative Features: Simplifying Serverless Deployment">​</a></h3>
+<p>Serverless refers to running back-end programs and processes in the cloud. Serverless works on an as-used basis, meaning that companies only use what they pay for. Knative is a platform-agnostic solution for running serverless deployments.</p>
+<p><img loading="lazy" alt="Knative Features" src="https://wedaa.tech/docs/assets/images/03-knative-features-ab0d3d0da33f8a2fcf5e74219d0e8fff.png" width="1395" height="539" class="img_ev3q"></p>
+<ul>
+<li>
+<p><strong>Simpler Abstractions</strong>: simplifies the YAML configuration process by providing custom CRDs (Custom Resource Definitions),
+streamlining the abstraction layers and making development workflows more straightforward.</p>
+</li>
+<li>
+<p><strong>Autoscaling</strong>: autoscaling feature seamlessly adjusts resource allocation, scaling applications down to zero and up from zero based on demand.</p>
+</li>
+<li>
+<p><strong>Progressive Rollouts</strong>: Customize your rollout strategy with Knative's Progressive Rollouts feature, offering flexibility to select the ideal
+approach based on your specific requirements.</p>
+</li>
+<li>
+<p><strong>Event Integrations</strong>: Easily manage events from diverse sources with Knative's Event Integrations, streamlining event handling for seamless integration.</p>
+</li>
+<li>
+<p><strong>Handle Events</strong>: Effortlessly trigger handlers from the event broker with Knative's event handling capabilities, ensuring seamless integration
+and streamlined workflow.</p>
+</li>
+<li>
+<p><strong>Plugable</strong>: Knative's pluggable architecture ensures seamless integration and extension within the Kubernetes ecosystem, providing
+flexibility and scalability for diverse use cases.</p>
+</li>
+</ul>
+<h2 class="anchor anchorWithStickyNavbar_LWe7" id="knative-components">Knative Components<a href="https://wedaa.tech/docs/blog/2024/04/13/overview-on-knative#knative-components" class="hash-link" aria-label="Direct link to Knative Components" title="Direct link to Knative Components">​</a></h2>
+<p>Knative has two main components that empower teams working with Kubernetes. Serving and
+Eventing work together to automate and manage tasks and applications.</p>
+<p><img loading="lazy" alt="Serving Eventing" src="https://wedaa.tech/docs/assets/images/04-serving-eventing-a2e56a6edb5b03ded58da4a919040440.png" width="932" height="353" class="img_ev3q"></p>
+<ul>
+<li><strong>Knative Serving</strong>: Allows running serverless containers in Kubernetes with ease. Knative takes care of the details of networking,
+autoscaling (even to zero), and revision tracking. Teams can focus on core logic using any programming language.</li>
+<li><strong>Knative Eventing</strong>: Allows universal subscription, delivery and management of events. Build modern apps by attaching compute to a
+data stream with declarative event connectivity and developer friendly object models.</li>
+</ul>
+<h3 class="anchor anchorWithStickyNavbar_LWe7" id="knative-serving">Knative Serving<a href="https://wedaa.tech/docs/blog/2024/04/13/overview-on-knative#knative-serving" class="hash-link" aria-label="Direct link to Knative Serving" title="Direct link to Knative Serving">​</a></h3>
+<p>Knative Serving defines a set of objects as Kubernetes Custom Resource Definitions (CRDs). These objects get used to define and control how your serverless workload behaves on the cluster:</p>
+<p><img loading="lazy" alt="Knative Serving" src="https://wedaa.tech/docs/assets/images/05-knative-serving-81d75b163b72ae38758471ef4605a10b.png" width="644" height="432" class="img_ev3q"></p><p align="center">Savita Ashture, <a href="https://creativecommons.org/licenses/by-sa/4.0/" target="_blank" rel="noopener noreferrer">CC BY-SA 4.0</a></p><p></p>
+<ul>
+<li>
+<p><strong>Service</strong>: A Knative Service describes a combination of a route and a configuration as shown above. It is a higher-level entity that does not provide any additional functionality. It should make it easier to deploy an application quickly and make it available. You can define the service to always route traffic to the latest revision or a pinned revision.</p>
+</li>
+<li>
+<p><strong>Route</strong>: The Route describes how a particular application gets called and how the traffic gets distributed across the different revisions. There is a high chance that several revisions can be active in the system at any given time based on the use case in those scenarios. It's the responsibility of routes to split the traffic and assign to revisions.</p>
+</li>
+<li>
+<p><strong>Configuration</strong>: The Configuration describes what the corresponding deployment of the application should look like. It provides a clean separation between code and configuration and follows the Twelve-Factor App methodology. Modifying a configuration creates a new revision.</p>
+</li>
+<li>
+<p><strong>Revision</strong>: The Revision represents the state of a configuration at a specific point in time. A revision, therefore, gets created from the configuration. Revisions are immutable objects, and you can retain them for as long as useful. Several revisions per configuration may be active at any given time, and you can automatically scale up and down according to incoming traffic.</p>
+</li>
+</ul>
+<h4 class="anchor anchorWithStickyNavbar_LWe7" id="knative-serving-focuses-on">Knative Serving focuses on:<a href="https://wedaa.tech/docs/blog/2024/04/13/overview-on-knative#knative-serving-focuses-on" class="hash-link" aria-label="Direct link to Knative Serving focuses on:" title="Direct link to Knative Serving focuses on:">​</a></h4>
+<ul>
+<li>Rapid deployment of serverless containers.</li>
+<li>Autoscaling includes scaling pods down to zero.</li>
+<li>Support for multiple networking layers such as Ambassador, Contour, Kourier, Gloo, and Istio for integration into existing environments.</li>
+<li>Give point-in-time snapshots of deployed code and configurations.</li>
+</ul>
+<h3 class="anchor anchorWithStickyNavbar_LWe7" id="knative-eventing">Knative Eventing<a href="https://wedaa.tech/docs/blog/2024/04/13/overview-on-knative#knative-eventing" class="hash-link" aria-label="Direct link to Knative Eventing" title="Direct link to Knative Eventing">​</a></h3>
+<p>Knative Eventing is a collection of APIs that enable you to use an event-driven architecture with your applications. You can create components that route events from event producers to event consumers, known as sinks, that receive events.</p>
+<h4 class="anchor anchorWithStickyNavbar_LWe7" id="use-cases">Use-cases<a href="https://wedaa.tech/docs/blog/2024/04/13/overview-on-knative#use-cases" class="hash-link" aria-label="Direct link to Use-cases" title="Direct link to Use-cases">​</a></h4>
+<p>General areas of application are:</p>
+<ul>
+<li>
+<p>Publishing an event without creating a consumer. You can send events to a broker as an HTTP POST, and use binding to decouple the destination configuration from your application that produces events.</p>
+</li>
+<li>
+<p>Consuming an event without creating a publisher. You can use a trigger to consume events from a broker based on event attributes.</p>
+</li>
+<li>
+<p>IoT, network monitoring, application monitoring, website testing and validation, and mobile app front-end processes that act as event generators.</p>
+</li>
+</ul>
+<h4 class="anchor anchorWithStickyNavbar_LWe7" id="use-knative-eventing-when">Use Knative eventing when:<a href="https://wedaa.tech/docs/blog/2024/04/13/overview-on-knative#use-knative-eventing-when" class="hash-link" aria-label="Direct link to Use Knative eventing when:" title="Direct link to Use Knative eventing when:">​</a></h4>
+<ul>
+<li>
+<p>When you want to publish an event without creating a consumer. You can send events to a broker as an HTTP POST, and use binding to decouple the destination configuration from your application that produces events.</p>
+</li>
+<li>
+<p>When you want to consume an event without creating a publisher. You can use a trigger to consume events from a broker based on event attributes. The application receives events as an HTTP POST.</p>
+</li>
+<li>
+<p>When you want to create components that route events from event producers to event consumers, known as sinks, that receive events. Sinks can also be configured to respond to HTTP requests by sending a response event.</p>
+</li>
+</ul>
+<p><img loading="lazy" alt="Knative Eventing" src="https://wedaa.tech/docs/assets/images/06-knative-eventing-eda6ccc26ee2faba5845f2bcd75bf703.png" width="880" height="366" class="img_ev3q"></p><p align="center"><a href="https://dev.to/ashokan/knative-eventing-e95" target="_blank" rel="noopener noreferrer">Eventing Components</a></p><p></p>
+<h4 class="anchor anchorWithStickyNavbar_LWe7" id="components">Components<a href="https://wedaa.tech/docs/blog/2024/04/13/overview-on-knative#components" class="hash-link" aria-label="Direct link to Components" title="Direct link to Components">​</a></h4>
+<ul>
+<li>
+<p><strong>Sources</strong>: Knative eventing sources are objects that generate events and send them to a sink. They are created by instantiating a custom resource (CR) from a source object. There are different types of sources, such as PingSource, ApiServerSource, KafkaSource, etc., depending on the event producer.</p>
+</li>
+<li>
+<p><strong>Sinks</strong>: Knative eventing sinks are objects that receive events from sources or other components. They can be Addressable or Callable resources that have an address defined in their status.address.url field. Addressable sinks can receive and acknowledge an event delivered over HTTP, while Callable sinks can also respond to HTTP requests by sending a response event. Knative Services, Channels, and Brokers are all examples of sinks.</p>
+</li>
+<li>
+<p><strong>Brokers</strong>: Knative eventing brokers are objects that define an event mesh for collecting a pool of events. Brokers provide a discoverable endpoint for event ingress, and use triggers for event delivery. Event producers can send events to a broker by posting the event.</p>
+</li>
+<li>
+<p><strong>Channels</strong>: Channels are custom resources that define a single event-forwarding and persistence layer. You can connect channels to various backends for sourcing events, such as In-Memory, Kafka, or GCP PubSub. You can also fan-out received events, through subscriptions, to multiple destinations, or sinks. Examples of sinks include brokers and Knative services.</p>
+</li>
+<li>
+<p><strong>Subscriptions</strong>: Knative subscriptions are objects that enable event delivery from a channel to an event sink, also known as a subscriber. A subscription specifies the channel and the sink to deliver events to, as well as some sink-specific options, such as how to handle failures.</p>
+</li>
+<li>
+<p><strong>Triggers</strong>: Knative Triggers are objects that enable seamless integration with external event sources, allowing applications to react dynamically to incoming events, fostering the development of scalable, event-driven architectures.</p>
+</li>
+</ul>
+<h2 class="anchor anchorWithStickyNavbar_LWe7" id="conclusion">Conclusion<a href="https://wedaa.tech/docs/blog/2024/04/13/overview-on-knative#conclusion" class="hash-link" aria-label="Direct link to Conclusion" title="Direct link to Conclusion">​</a></h2>
+<p>In this overview, we've explored serverless computing with Knative on Kubernetes, covering core concepts, features, and components. Stay tuned for practical implementations and real-world use cases in upcoming blogs, unlocking Knative's full potential for your projects. With Knative, the future of serverless on Kubernetes is brighter than ever.</p>
+<p>Furthermore, I'm excited to announce that our platform, <a href="https://app.wedaa.tech/" target="_blank" rel="noopener noreferrer">WeDAA</a>, will be hosting these upcoming blogs. WeDAA is committed to providing innovative solutions, and soon, we'll be incorporating serverless capabilities into our platform. Keep an eye out for our future updates, as we continue to evolve and enhance our services to meet your needs.</p>]]></content:encoded>
+            <category>microservices</category>
+            <category>architecture</category>
+            <category>cloud-native</category>
+            <category>Serverless</category>
+            <category>cloud computing</category>
+            <category>knative</category>
+            <category>kubernetes</category>
+        </item>
         <item>
             <title><![CDATA[Building event driven microservices architecture with RabbitMQ]]></title>
             <link>https://wedaa.tech/docs/blog/2024/01/15/rabbitmq</link>
