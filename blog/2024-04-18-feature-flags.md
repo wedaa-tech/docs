@@ -83,15 +83,14 @@ A sample controller with API to simulate payments.
 package controllers
 
 import (
- "github.com/gorilla/mux"
- "net/http"
- "payments/handlers"
+   "github.com/gorilla/mux"
+   "net/http"
+   "payments/handlers"
 )
 
 var paymentsHandler *handler.PaymentsHandler
 
-type PaymentsController struct {
-}
+type PaymentsController struct {}
 
 func (paymentsController PaymentsController) RegisterRoutes(r *mux.Router) {
 	r.Handle("/api/payments",http.HandlerFunc(paymentsHandler.ProcessPayment)).Methods(http.MethodGet,http.MethodOptions)
