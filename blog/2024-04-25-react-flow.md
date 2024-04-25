@@ -1,6 +1,6 @@
 ---
-title: React Flow
-description: React Flow
+title: Revolutionizing Software Development with React Flow
+description: Revolutionizing Software Development with React Flow
 image: https://user-images.githubusercontent.com/3797215/156259138-fb9f59f8-52f2-474a-b78c-6570867e4ead.svg#gh-light-mode-only
 tags: [react, reactflow, bestpractices]
 date: 2024-04-25
@@ -273,7 +273,7 @@ Next, let's add color options to our node component and link them to the handleC
 The animation below demonstrates changing the color of a node:
 
 <video controls width="740" height="420">
-  <source src="/img/blog/react-flow/node-color.mp4" type="video/mp4"></source>
+  <source src="/docs/videos/node-color.mp4" type="video/mp4"></source>
 </video>
 
 By implementing color options and the color change function, you can customize the appearance of nodes in your React Flow diagrams to match your design preferences or convey specific information.
@@ -367,7 +367,7 @@ In this example, we focus on handling dimension changes (change.type === "dimens
 The animation below demonstrates saving node positions and dimensions after submitting:
 
 <video controls width="740" height="420">
-  <source src="/img/blog/react-flow/node-dimension-change.mp4" type="video/mp4"></source>
+  <source src="/docs/videos/node-dimension-change.mp4" type="video/mp4"></source>
 </video>
 
 By leveraging onNodesChange and handling different change types effectively, we ensure that node positions and dimensions are updated and saved seamlessly within the React Flow environment.
