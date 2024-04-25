@@ -30,7 +30,7 @@ React Flow is unique in that it's built on top of React, which means that it ben
 
 In conclusion, React Flow is a powerful library for building interactive node-based UIs, such as flowcharts, diagrams, and graphs. It's highly customizable, integrates seamlessly with other React components and libraries, and is actively maintained by a large community of developers. If you're looking to build complex and interactive UIs, React Flow is definitely worth checking out.
 
-### Installation of React Flow
+## Installation of React Flow
 
 We need to install the following before working on react:
 
@@ -81,7 +81,7 @@ The `<ReactFlow />` component must be wrapped in an element with a width and h
 
 **Of course, this is just a basic example, and React Flow provides many more features and customization options. To learn more, check out the React Flow documentation and examples.**
 
-## **Want to dive into React Flow?**
+## Want to dive into React Flow?
 
 Here's a link to learn more about React Flow: [React Flow](https://reactflow.dev/)
 
@@ -95,7 +95,7 @@ As we have already seen the examples of react flow nodes and interactivity,lets 
 
 A powerful feature of React Flow is the ability to add custom nodes. Within your custom nodes you can render everything you want.
 
-### Creating Custom Nodes
+<span style={{ fontSize: '23px' }}>**Creating Custom Nodes**</span>
 
 To create a custom node, you can leverage the newNode object structure as follows:
 
@@ -114,7 +114,8 @@ const newNode = {
 
 In the type field, specify the custom node type you wish to utilize. This approach allows for the creation of nodes with diverse functionalities, enhancing the visual representation of data and interactions.
 
-### Combining Node Functionality
+<span style={{ fontSize: '23px' }}>**Combining Node Functionality**</span>
+
 React Flow also supports combining multiple functionalities into a single custom node. For instance, if you want a node to display an image and provide resizing options, you can achieve this by creating a custom node file and incorporating `<NodeResizer>` alongside your content:
 
 ```jsx
@@ -137,7 +138,7 @@ return (
 
 This approach seamlessly integrates diverse features into a cohesive node representation, offering a comprehensive solution for complex UI requirements.
 
-### Example
+<span style={{ fontSize: '23px' }}>**Example**</span>
 
 The image below showcases a custom node used within a React Flow application. This custom node demonstrates the potential for creating visually rich and interactive elements within the flow diagram.
 
@@ -149,7 +150,7 @@ By leveraging custom nodes in React Flow, developers can unlock a world of possi
 
 To enable edges to connect to any side of a node, serving as both the source and the target, we can add handles to all sides of the node. This functionality enhances the flexibility and interactivity of our flow diagrams.
 
-### Implementation
+<span style={{ fontSize: '23px' }}>**Implementation**</span>
 
 First, let's add handles to each side (Top, Left, Bottom, Right) of the node:
 
@@ -214,7 +215,7 @@ The component confidently retrieves the `connectionNodeId` from the application'
 
 This approach ensures that whenever a node acts as a source, all the other nodes change their behavior as the target node and vice versa. The desired outcome is achieved through the use of zIndex.
 
-### Example
+<span style={{ fontSize: '23px' }}>**Example**</span>
 
 The image below illustrates a custom node with handles on all sides:
 
@@ -234,7 +235,7 @@ To enhance node and edge deletion functionality in a React Flow application, Rea
 
 While React Flow doesn't have a direct method for setting specific background colors for nodes, we can achieve this functionality by defining a function to handle color changes and incorporating color options into our node components.
 
-### Color Change Function
+<span style={{ fontSize: '23px' }}>**Color Change Function**</span>
 
 Let's start by defining the handleColorClick function, which will be responsible for changing the background color of a node:
 
@@ -251,7 +252,7 @@ This is a code defines a function called `handleColorClick`. The function takes 
 
 The function first creates a copy of the `nodes` object using the spread operator, so that the original object is not modified directly. It then sets the `selectedColor` state variable to the provided `color`. Finally, it sets the `backgroundColor` property of the node with the ID specified by `nodeClick` to the provided `color`. If the `style` property does not exist for that node, it will be created and set to an empty object before the `backgroundColor` property is added to it. The nullish coalescing operator (`??=`) ensures that the `style` property is set to an object if it does not already exist.
 
-### Adding Color Options
+<span style={{ fontSize: '23px' }}>**Adding Color Options**</span>
 
 Next, let's add color options to our node component and link them to the handleColorClick function:
 
@@ -268,7 +269,7 @@ Next, let's add color options to our node component and link them to the handleC
 ></div>
 ```
 
-### Example
+<span style={{ fontSize: '23px' }}>**Example**</span>
 
 The animation below demonstrates changing the color of a node:
 
@@ -282,7 +283,7 @@ By implementing color options and the color change function, you can customize t
 
 In React Flow, the ability to add a background grid to the canvas provides a valuable tool for maintaining precise alignment and enhancing the aesthetics of your flowchart. Whether you're crafting a complex diagram or a simple layout, the grid system ensures that nodes and elements align perfectly, contributing to a well-organized and visually appealing flow chart.
 
-### Implementation in React Flow
+<span style={{ fontSize: '23px' }}>**Implementation in React Flow**</span>
 
 To add a background grid to your React Flow canvas, you can use the `<Background>` component with specific configurations. Here's an example of how to implement it:
 
@@ -298,7 +299,7 @@ To add a background grid to your React Flow canvas, you can use the `<Background
 
 In this code snippet, we set the gap prop to define the gap between grid patterns, the color prop to specify the color of the grid, and the variant prop to determine the type of grid variant (lines, grid, dots).
 
-### Example
+<span style={{ fontSize: '23px' }}>**Example**</span>
 
 The image below showcases a custom node with a background grid applied to the canvas:
 
@@ -310,7 +311,8 @@ By incorporating a background grid, you can ensure precise alignment and enhance
 
 In React Flow, the onNodesChange function plays a crucial role in handling changes to nodes within the flow. It's often called in response to user actions like dragging nodes, selecting nodes, or removing nodes.
 
-### Implementing onNodesChange
+<span style={{ fontSize: '23px' }}>**Implementing onNodesChange**</span>
+
 First, let's set up onNodesChange in our React Flow component:
 
 ```jsx
@@ -323,7 +325,7 @@ First, let's set up onNodesChange in our React Flow component:
 
 The onNodesChange callback receives a list of changes when nodes are modified in the flow. We pass these changes to our onNodesChange function to handle updates.
 
-### Handling Position and Dimension Changes
+<span style={{ fontSize: '23px' }}>**Handling Position and Dimension Changes**</span>
 
 Inside onNodesChange, we can handle position and dimension changes using a switch case:
 
@@ -363,7 +365,8 @@ const onNodesChange = useCallback((/*desiredArguments*/, changes = []) => {
 
 In this example, we focus on handling dimension changes (change.type === "dimensions") by updating the node's dimensions and style accordingly. You can similarly add logic for position changes (change.type === "position") or other types of changes as required.
 
-### Example
+<span style={{ fontSize: '23px' }}>**Example**</span>
+
 The animation below demonstrates saving node positions and dimensions after submitting:
 
 <video controls width="740" height="420">
@@ -377,7 +380,7 @@ By leveraging onNodesChange and handling different change types effectively, we 
 
 In addition to managing node changes, React Flow provides the onEdgesChange callback to handle modifications to edges within the flow. This includes actions like adding or removing edges, which are essential for creating a controlled and interactive flow diagram.
 
-### Implementing onEdgesChange
+<span style={{ fontSize: '23px' }}>**Implementing onEdgesChange**</span>
 
 Let's integrate onEdgesChange into our React Flow component:
 
