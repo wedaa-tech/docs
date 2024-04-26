@@ -85,7 +85,7 @@ The `<ReactFlow />` component must be wrapped in an element with a width and h
 
 Here's a link to learn more about React Flow: [React Flow](https://reactflow.dev/)
 
-## Why React Flow in WeDaa?
+## Why React Flow in WeDAA?
 
 In our project, we are using React Flow because it allows us to create interactive node-based UIs, such as flowchart. We can easily convert these diagrams into code based on the produced JSON, which helps us to create a Well-Defined Architecture.
 
@@ -406,4 +406,4 @@ The onEdgesChange function receives a list of changes when edges are modified in
 
 ## Conclusion
 
-React Flow stands as a pivotal tool in modern development, transforming the way we navigate and manipulate data structures within React applications. Its user-friendly drag-and-drop interface, coupled with extensive customization capabilities, empowers developers to craft dynamic and interactive flowcharts seamlessly. With React Flow, developers gain a powerful ally in enhancing user experiences, streamlining data visualization, and boosting productivity in building applications that effortlessly handle complex data workflows. Moreover, React Flow enables easy drawing of flowcharts, visualization of data, and significantly enhances the UI experience, making it an ideal choice for complex applications like Wedaa.
+React Flow stands as a pivotal tool in modern development, transforming the way we navigate and manipulate data structures within React applications. Its user-friendly drag-and-drop interface, coupled with extensive customization capabilities, empowers developers to craft dynamic and interactive flowcharts seamlessly. With React Flow, developers gain a powerful ally in enhancing user experiences, streamlining data visualization, and boosting productivity in building applications that effortlessly handle complex data workflows. Moreover, React Flow enables easy drawing of flowcharts, visualization of data, and significantly enhances the UI experience, making it an ideal choice for complex applications like WeDAA.
