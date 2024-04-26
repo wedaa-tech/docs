@@ -81,7 +81,7 @@ The `<ReactFlow />` component must be wrapped in an element with a width and h
 
 **Of course, this is just a basic example, and React Flow provides many more features and customization options. To learn more, check out the React Flow documentation and examples.**
 
-## Want to dive into React Flow?
+# Want to dive into React Flow?
 
 Here's a link to learn more about React Flow: [React Flow](https://reactflow.dev/)
 
@@ -91,11 +91,11 @@ In our project, we are using React Flow because it allows us to create interacti
 
 As we have already seen the examples of react flow nodes and interactivity,lets dive into the challanges faced while working with React Flow.
 
-## Custom Nodes
+### Custom Nodes
 
 A powerful feature of React Flow is the ability to add custom nodes. Within your custom nodes you can render everything you want.
 
-<span style={{ fontSize: '20px' }}>**Creating Custom Nodes**</span>
+<span style={{ fontSize: '20px'}}>**Creating Custom Nodes**</span>
 
 To create a custom node, you can leverage the newNode object structure as follows:
 
