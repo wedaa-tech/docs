@@ -14,14 +14,14 @@ There are still servers in serverless, but they are abstracted away from app dev
 Once deployed, serverless apps respond to demand and automatically scale up and down as needed.
 
 ### Serverless Computing: A Catering Service Analogy
-![Catering Service Analogy](resources/dive-into-knative/01-catering-service-analogy.png)<p align="center">[Catering Service Analogy](https://www.freepik.com/premium-vector/catering-concept-illustration-idea-food-service-hotel-event-restaurant-banquet-party-catering-service-web-banner-illustration_10275389.htm)</p>
+![Catering Service Analogy](/img/blog/dive-into-knative/01-catering-service-analogy.png)<p align="center">[Catering Service Analogy](https://www.freepik.com/premium-vector/catering-concept-illustration-idea-food-service-hotel-event-restaurant-banquet-party-catering-service-web-banner-illustration_10275389.htm)</p>
 
 Imagine you're hosting a dinner party. In a traditional hosting scenario, you'd have to plan everything from cooking the food to setting the table and serving your guests. This is like managing servers in traditional computing – you have to handle all the details yourself.
 
 Now, consider a serverless approach as hiring a catering service for your party. You tell them what you need, and they take care of everything – from cooking the food to setting up and serving. You don't have to worry about the kitchen logistics or cleaning up afterward; you can focus on enjoying the party with your guests. Similarly, in serverless computing, you provide your code, and the cloud provider takes care of the infrastructure, scaling, and management, allowing you to focus on writing and improving your application.
 
 ### Kubernetes-Powered Serverless: Introducing Knative
-![Serverless Framework Knative](resources/dive-into-knative/02-serverless-framework-knative.png)<p align="center">[Serverless Framework Knative](https://www.serverless.com/blog/serverless-framework-knative-component)</p>
+![Serverless Framework Knative](//img/blog/dive-into-knative/02-serverless-framework-knative.png)<p align="center">[Serverless Framework Knative](https://www.serverless.com/blog/serverless-framework-knative-component)</p>
 
 
 
@@ -33,7 +33,7 @@ Collaboratively developed by industry leaders like Google and Red Hat, Knative a
 
 Serverless refers to running back-end programs and processes in the cloud. Serverless works on an as-used basis, meaning that companies only use what they pay for. Knative is a platform-agnostic solution for running serverless deployments.
 
-![Knative Features](resources/dive-into-knative/03-knative-features.png)
+![Knative Features](/img/blog/dive-into-knative/03-knative-features.png)
 
 
 - **Simpler Abstractions**: simplifies the YAML configuration process by providing custom CRDs (Custom Resource Definitions), 
@@ -57,7 +57,7 @@ Serverless refers to running back-end programs and processes in the cloud. Serve
 Knative has two main components that empower teams working with Kubernetes. Serving and
 Eventing work together to automate and manage tasks and applications.
 
-![Serving Eventing](resources/dive-into-knative/04-serving-eventing.png)
+![Serving Eventing](/img/blog/dive-into-knative/04-serving-eventing.png)
 
 - **Knative Serving**: Allows running serverless containers in Kubernetes with ease. Knative takes care of the details of networking, 
                        autoscaling (even to zero), and revision tracking. Teams can focus on core logic using any programming language.
@@ -68,7 +68,7 @@ Eventing work together to automate and manage tasks and applications.
 
 Knative Serving defines a set of objects as Kubernetes Custom Resource Definitions (CRDs). These objects get used to define and control how your serverless workload behaves on the cluster:
 
-![Knative Serving](resources/dive-into-knative/05-knative-serving.png)<p align="center">Savita Ashture, [CC BY-SA 4.0](https://creativecommons.org/licenses/by-sa/4.0/)</p>
+![Knative Serving](/img/blog/dive-into-knative/05-knative-serving.png)<p align="center">Savita Ashture, [CC BY-SA 4.0](https://creativecommons.org/licenses/by-sa/4.0/)</p>
 
 
 - **Service**: A Knative Service describes a combination of a route and a configuration as shown above. It is a higher-level entity that does not provide any additional functionality. It should make it easier to deploy an application quickly and make it available. You can define the service to always route traffic to the latest revision or a pinned revision.
@@ -106,7 +106,7 @@ General areas of application are:
 
 - When you want to create components that route events from event producers to event consumers, known as sinks, that receive events. Sinks can also be configured to respond to HTTP requests by sending a response event.
 
-![Knative Eventing](resources/dive-into-knative/06-knative-eventing.png)<p align="center">[Eventing Components](https://dev.to/ashokan/knative-eventing-e95)</p>
+![Knative Eventing](/img/blog/dive-into-knative/06-knative-eventing.png)<p align="center">[Eventing Components](https://dev.to/ashokan/knative-eventing-e95)</p>
 
 #### Components
 
