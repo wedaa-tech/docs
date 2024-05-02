@@ -1,1 +1,0 @@
-"use strict";(self.webpackChunkdocusaurus_documentation=self.webpackChunkdocusaurus_documentation||[]).push([[1914],{4636:s=>{s.exports=JSON.parse('{"label":"Serverless","permalink":"/docs/blog/tags/serverless","allTagsPath":"/docs/blog/tags","count":1,"unlisted":false}')}}]);

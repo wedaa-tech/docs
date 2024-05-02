@@ -1,0 +1,1 @@
+"use strict";(self.webpackChunkdocusaurus_documentation=self.webpackChunkdocusaurus_documentation||[]).push([[917],{3895:s=>{s.exports=JSON.parse('{"label":"cloud computing","permalink":"/docs/blog/tags/cloud-computing","allTagsPath":"/docs/blog/tags","count":2,"unlisted":false}')}}]);

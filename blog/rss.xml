@@ -4,10 +4,259 @@
         <title>WeDAA Blog</title>
         <link>https://wedaa.tech/docs/blog</link>
         <description>WeDAA Blog</description>
-        <lastBuildDate>Thu, 25 Apr 2024 00:00:00 GMT</lastBuildDate>
+        <lastBuildDate>Wed, 01 May 2024 00:00:00 GMT</lastBuildDate>
         <docs>https://validator.w3.org/feed/docs/rss2.html</docs>
         <generator>https://github.com/jpmonette/feed</generator>
         <language>en</language>
+        <item>
+            <title><![CDATA[Definitive Guide to Knative Serving—A Deep Dive into Theory and Architecture]]></title>
+            <link>https://wedaa.tech/docs/blog/2024/05/01/knative-serving-01</link>
+            <guid>https://wedaa.tech/docs/blog/2024/05/01/knative-serving-01</guid>
+            <pubDate>Wed, 01 May 2024 00:00:00 GMT</pubDate>
+            <description><![CDATA[A Deep Dive into Theory and Architecture of Knative Serving]]></description>
+            <content:encoded><![CDATA[<p>If you missed the first installment of our Knative series, you can catch up by diving into our previous blog post:
+<a href="https://www.wedaa.tech/docs/blog/2024/04/13/overview-on-knative" target="_blank" rel="noopener noreferrer">Dive into Knative—Explore Serverless with Kubernetes</a></p>
+<h2 class="anchor anchorWithStickyNavbar_LWe7" id="overview">Overview<a href="https://wedaa.tech/docs/blog/2024/05/01/knative-serving-01#overview" class="hash-link" aria-label="Direct link to Overview" title="Direct link to Overview">​</a></h2>
+<p><img loading="lazy" alt="Overview" src="https://wedaa.tech/docs/assets/images/00-overview-864fc8c0625a8618b6b29f81448f516c.png" width="625" height="313" class="img_ev3q"></p><p align="center"><a href="https://technologyconversations.com/2020/08/19/serverless-computing-with-knative-and-containers-as-a-service-caas/" target="_blank" rel="noopener noreferrer">Technology Conversations</a></p><p></p>
+<p>The key aspects and benefits of Knative Serving:</p>
+<ol>
+<li><strong>Serverless Platform</strong>: Knative Serving is a serverless platform built on top of Kubernetes.</li>
+<li><strong>Deployment Simplification</strong>: It simplifies the deployment of containerized applications on Kubernetes.</li>
+<li><strong>Auto-scaling</strong>: Automatically scales applications based on demand, ensuring optimal resource utilization.</li>
+<li><strong>Traffic Management</strong>: Provides features for managing traffic routing, allowing seamless updates and rollbacks.</li>
+<li><strong>Focus on Development</strong>: Abstracts away infrastructure management complexities, enabling developers to focus on writing and deploying code.</li>
+<li><strong>Cloud-Native Applications</strong>: Facilitates the development of modern, scalable, and resilient cloud-native applications.</li>
+</ol>
+<p>For an introductory exploration of Knative Serving, delve into our dedicated <a href="https://www.wedaa.tech/docs/blog/2024/04/13/overview-on-knative#knative-serving" target="_blank" rel="noopener noreferrer">Knative Serving</a> section.</p>
+<h2 class="anchor anchorWithStickyNavbar_LWe7" id="knative-serving-architecture">Knative Serving Architecture<a href="https://wedaa.tech/docs/blog/2024/05/01/knative-serving-01#knative-serving-architecture" class="hash-link" aria-label="Direct link to Knative Serving Architecture" title="Direct link to Knative Serving Architecture">​</a></h2>
+<h3 class="anchor anchorWithStickyNavbar_LWe7" id="architecture-diagram">Architecture Diagram<a href="https://wedaa.tech/docs/blog/2024/05/01/knative-serving-01#architecture-diagram" class="hash-link" aria-label="Direct link to Architecture Diagram" title="Direct link to Architecture Diagram">​</a></h3>
+<p>Knative Serving consists of several components forming the backbone of the Serverless Platform. This blog explains the high-level architecture of Knative Serving.</p>
+<p><img loading="lazy" alt="Architecture" src="https://wedaa.tech/docs/assets/images/01-architecture-f34a59cc6df015d89698eaaf7c37498f.png" width="650" height="614" class="img_ev3q"></p>
+<h3 class="anchor anchorWithStickyNavbar_LWe7" id="components">Components<a href="https://wedaa.tech/docs/blog/2024/05/01/knative-serving-01#components" class="hash-link" aria-label="Direct link to Components" title="Direct link to Components">​</a></h3>
+<ul>
+<li><strong>Activator</strong>: The activator is part of the [data-plane]. It is responsible to queue incoming requests (if a Knative Service is scaled-to-zero). It communicates with the autoscaler to bring scaled-to-zero Services back up and forward the queued requests. Activator can also act as a request buffer to handle traffic bursts.</li>
+<li><strong>Autoscaler</strong>: The autoscaler is responsible to scale the Knative Services based on configuration, metrics and incoming requests.</li>
+<li><strong>Controller</strong>: The controller manages the state of Knative resources within the cluster. It watches several objects, manages the lifecycle of dependent     resources, and updates the resource state.</li>
+<li><strong>Queue-Proxy</strong>:	The Queue-Proxy is a sidecar container in the Knative Service's Pod. It is responsible to collect metrics and enforcing the desired concurrency when forwarding requests to the user's container. It can also act as a queue if necessary, similar to the Activator.</li>
+<li><strong>Webhooks</strong>:	Knative Serving has several webhooks responsible to validate and mutate Knative Resources.</li>
+</ul>
+<h3 class="anchor anchorWithStickyNavbar_LWe7" id="http-request-flows">HTTP Request Flows<a href="https://wedaa.tech/docs/blog/2024/05/01/knative-serving-01#http-request-flows" class="hash-link" aria-label="Direct link to HTTP Request Flows" title="Direct link to HTTP Request Flows">​</a></h3>
+<p>This explains the behavior and flow of HTTP requests to an application which is running on Knative Serving.</p>
+<p><img loading="lazy" alt="HTTP Request Flows" src="https://wedaa.tech/docs/assets/images/02-http-request-flow-9ce25bf99935eeaf5fe92f4a2b9b15f6.png" width="938" height="436" class="img_ev3q"></p>
+<ol>
+<li><strong>Initial Request</strong>: When a user sends an HTTP request to your Knative service, it first hits the ingress gateway.</li>
+<li><strong>Routing Decision</strong>: The ingress gateway examines the request to determine which Knative service should handle it based on the requested domain name.</li>
+<li><strong>Service Activation</strong>: Knative Serving keeps your service deployed at all times. When a request arrives and no instances are running, it promptly activates a new instance by spinning up a pod.</li>
+<li><strong>Scaling Decision</strong>: Knative Serving checks the current load and decides how many instances of the service need to be running to handle incoming requests efficiently.</li>
+<li><strong>Activator Interaction</strong>: For the first-time request, it goes to the activator. The activator asks the auto scaler to scale up one pod to serve the initial request, ensuring rapid response and availability.</li>
+<li><strong>Request Handling</strong>: The request is then forwarded to one of the instances of your service, where your application code processes it.</li>
+<li><strong>Containerized Environment</strong>: Within each pod, there are two containers:<!-- -->
+<ul>
+<li>User Container: This container hosts your application code, serving user requests.</li>
+<li>Queue Container: This container monitors metrics and observes concurrency levels.</li>
+</ul>
+</li>
+<li><strong>Auto-scaling Based on Concurrency</strong>: When the concurrency exceeds the default level, the autoscaler spins up new pods to handle the increased concurrent requests, ensuring optimal performance.</li>
+<li><strong>Response</strong>: After processing the request, your service generates a response, which is sent back through the same flow to the user who made the initial request.</li>
+<li><strong>Scaling Down</strong>: If there is no more traffic or if the traffic decreases significantly, Knative Serving may scale down the number of running instances to save resources.</li>
+</ol>
+<h3 class="anchor anchorWithStickyNavbar_LWe7" id="revisions">Revisions<a href="https://wedaa.tech/docs/blog/2024/05/01/knative-serving-01#revisions" class="hash-link" aria-label="Direct link to Revisions" title="Direct link to Revisions">​</a></h3>
+<ul>
+<li>Revisions are Knative Serving resources representing snapshots of application code and configuration.</li>
+<li>They are created automatically in response to updates in a Configuration spec.</li>
+<li>Revisions cannot be directly created or updated; they are managed through Configuration changes.</li>
+<li>Deletion of Revisions can be forced to handle resource leaks or remove problematic Revisions.</li>
+<li>Revisions are generally immutable, but may reference mutable Kubernetes resources like ConfigMaps and Secrets.</li>
+<li>Changes in Revision defaults can lead to syntactic mutations in Revisions, affecting configuration without altering their core behavior.</li>
+</ul>
+<h3 class="anchor anchorWithStickyNavbar_LWe7" id="autoscaling">Autoscaling<a href="https://wedaa.tech/docs/blog/2024/05/01/knative-serving-01#autoscaling" class="hash-link" aria-label="Direct link to Autoscaling" title="Direct link to Autoscaling">​</a></h3>
+<p><img loading="lazy" alt="Kubernetes Autoscaling Options" src="https://wedaa.tech/docs/assets/images/03-autoscaling-32d8341a0ce844ed806be8ea539a2a17.png" width="800" height="430" class="img_ev3q"></p><p align="center"><a href="https://platform9.com/blog/kubernetes-autoscaling-options-horizontal-pod-autoscaler-vertical-pod-autoscaler-and-cluster-autoscaler/" target="_blank" rel="noopener noreferrer">Kubernetes Autoscaling Options</a></p><p></p>
+<p>Knative Serving provides automatic scaling, or autoscaling, for applications to match incoming demand. This is provided by default, by using the Knative Pod Autoscaler (KPA).</p>
+<p>For example, if an application is receiving no traffic and scale to zero is enabled, Knative Serving scales the application down to zero replicas. If scaling to zero is disabled, the application is scaled down to the minimum number of replicas specified for applications on the cluster. Replicas are scaled up to meet demand if traffic to the application increases.</p>
+<h4 class="anchor anchorWithStickyNavbar_LWe7" id="supported-autoscaler-types">Supported Autoscaler types<a href="https://wedaa.tech/docs/blog/2024/05/01/knative-serving-01#supported-autoscaler-types" class="hash-link" aria-label="Direct link to Supported Autoscaler types" title="Direct link to Supported Autoscaler types">​</a></h4>
+<p>Knative Serving supports the implementation of Knative Pod Autoscaler (KPA) and Kubernetes' Horizontal Pod Autoscaler (HPA).</p>
+<ul>
+<li>Knative Pod Autoscaler (KPA)<!-- -->
+<ul>
+<li>Part of the Knative Serving core and enabled by default once Knative Serving is installed.</li>
+<li>Supports scale to zero functionality.</li>
+<li>Does not support CPU-based autoscaling.</li>
+</ul>
+</li>
+<li>Horizontal Pod Autoscaler (HPA)<!-- -->
+<ul>
+<li>Not part of the Knative Serving core, and you must install Knative Serving first.</li>
+<li>Does not support scale to zero functionality.</li>
+<li>Supports CPU-based autoscaling.</li>
+</ul>
+</li>
+</ul>
+<h2 class="anchor anchorWithStickyNavbar_LWe7" id="knative-serving-autoscaling-system">Knative Serving Autoscaling System<a href="https://wedaa.tech/docs/blog/2024/05/01/knative-serving-01#knative-serving-autoscaling-system" class="hash-link" aria-label="Direct link to Knative Serving Autoscaling System" title="Direct link to Knative Serving Autoscaling System">​</a></h2>
+<h3 class="anchor anchorWithStickyNavbar_LWe7" id="apis">APIs<a href="https://wedaa.tech/docs/blog/2024/05/01/knative-serving-01#apis" class="hash-link" aria-label="Direct link to APIs" title="Direct link to APIs">​</a></h3>
+<ol>
+<li><strong>PodAutoscaler</strong> (PA):<!-- -->
+<ul>
+<li>API: <code>podautoscalers.autoscaling.internal.knative.dev</code></li>
+<li>It's an abstraction that encompasses all possible PodAutoscalers, with the default implementation being the Knative Pod Autoscaler (KPA).</li>
+<li>The PodAutoscaler manages the <code>scaling target</code>, the <code>metric</code> used for scaling, and other <code>relevant inputs</code> for the autoscaling decision-making process.<!-- -->
+<ol>
+<li><strong>Scaling Target</strong>: The PodAutoscaler determines what resource it should scale. This could be the number of pods, CPU utilization, memory consumption, or any other metric that indicates the workload's demand.</li>
+<li><strong>Metric for Scaling</strong>: It specifies which metric or metrics should be used to make scaling decisions. For example, it might use CPU utilization to decide when to add or remove pods based on workload demand.</li>
+<li><strong>Other Inputs</strong>: The PodAutoscaler considers additional factors beyond just the scaling metric. These could include constraints, policies, or thresholds that influence scaling decisions. For instance, it might have rules to prevent scaling beyond a certain limit or to ensure a minimum number of pods are always running.</li>
+</ol>
+</li>
+<li>PodAutoscalers are automatically created from Revisions by default.</li>
+</ul>
+</li>
+<li><strong>Metric</strong>:<!-- -->
+<ul>
+<li>API: <code>metrics.autoscaling.internal.knative.dev</code></li>
+<li>This API controls the collector of the autoscaler, determining which service to scrape data from, how to aggregate it, and other related aspects.<!-- -->
+<ol>
+<li><strong>Collector Control</strong>: The API controls the collector component of the autoscaler. The collector is responsible for gathering data related to the performance and behavior of the services being monitored for autoscaling.</li>
+<li><strong>Data Scraping</strong>: It determines which service or services the autoscaler should scrape data from. This involves collecting relevant metrics such as CPU utilization, request latency, or throughput from the specified services.</li>
+<li><strong>Aggregation</strong>: The API defines how the collected data should be aggregated. This could involve calculating averages, sums, or other statistical measures over a specific time window to provide a meaningful representation of the service's performance.</li>
+<li><strong>Other Related Aspects</strong>: Beyond data collection and aggregation, the API likely handles other aspects such as data retention policies, thresholds for triggering scaling actions, and configurations for interacting with the autoscaler's decision-making process.</li>
+</ol>
+</li>
+<li>Metrics are automatically generated from PodAutoscalers by default.</li>
+</ul>
+</li>
+<li><strong>ServerlessServices</strong> (SKS):<!-- -->
+<ul>
+<li>API: <code>serverlessservices.networking.internal.knative.dev</code></li>
+<li>It's an abstraction layer built on top of Kubernetes Services, managing the data flow and the switch between using the activator as a buffer or routing directly to application instances.</li>
+<li>SKS creates two Kubernetes services for each revision: a public service and a private service.</li>
+<li>The private service points to the application instances, while the public service endpoints are managed directly by the SKS reconciler.</li>
+<li>SKS operates in two modes: Serve and Proxy.<!-- -->
+<ol>
+<li>In <strong>Serve mode</strong>, traffic flows directly to the revision's pods.</li>
+<li>In <strong>Proxy mode</strong>, traffic is directed to activators.</li>
+</ol>
+</li>
+<li>ServerlessServices are created from PodAutoscalers.</li>
+</ul>
+</li>
+</ol>
+<h3 class="anchor anchorWithStickyNavbar_LWe7" id="scaling-up-and-down-steady-state">Scaling up and down (steady state)<a href="https://wedaa.tech/docs/blog/2024/05/01/knative-serving-01#scaling-up-and-down-steady-state" class="hash-link" aria-label="Direct link to Scaling up and down (steady state)" title="Direct link to Scaling up and down (steady state)">​</a></h3>
+<p><img loading="lazy" alt="steady state" src="https://wedaa.tech/docs/assets/images/04-steady-state-62cf2df517223eaaedf233840e41a74c.png" width="783" height="591" class="img_ev3q"></p>
+<ul>
+<li><strong>Steady State Operation</strong>:<!-- -->
+<ul>
+<li>The autoscaler operates continuously at a steady state.</li>
+<li>It regularly scrapes data from the currently active revision pods to monitor their performance.</li>
+</ul>
+</li>
+<li><strong>Dynamic Adjustment</strong>:<!-- -->
+<ul>
+<li>As incoming requests flow into the system, the scraped values of performance metrics change accordingly.</li>
+<li>Based on these changing metrics, the autoscaler dynamically adjusts the scale of the revision.</li>
+</ul>
+</li>
+<li><strong>SKS Functionality</strong>:<!-- -->
+<ul>
+<li>The ServerlessServices (SKS) component keeps track of changes to the deployment's size.</li>
+<li>It achieves this by monitoring the private service associated with the deployment.</li>
+</ul>
+</li>
+<li><strong>Public Service Update</strong>:<!-- -->
+<ul>
+<li>SKS updates the public service based on the changes detected in the deployment's size.</li>
+<li>This ensures that the public service endpoints accurately reflect the available instances of the revision.</li>
+</ul>
+</li>
+</ul>
+<h3 class="anchor anchorWithStickyNavbar_LWe7" id="scaling-to-zero">Scaling to zero<a href="https://wedaa.tech/docs/blog/2024/05/01/knative-serving-01#scaling-to-zero" class="hash-link" aria-label="Direct link to Scaling to zero" title="Direct link to Scaling to zero">​</a></h3>
+<p><img loading="lazy" alt="Scaling to zero" src="https://wedaa.tech/docs/assets/images/05-scaling-to-zero-edbbc4a96b34af7d03439022eaf00ecc.png" width="811" height="500" class="img_ev3q"></p>
+<ul>
+<li><strong>Scaling to Zero Process</strong> (1):<!-- -->
+<ul>
+<li>A revision scales down to zero when there are no more requests in the system.</li>
+<li>All data collected by the autoscaler from revision pods and the activator reports zero concurrency, indicating no active requests.</li>
+</ul>
+</li>
+<li><strong>Activator Preparation</strong>:<!-- -->
+<ul>
+<li>Before removing the last pod of the revision, the system ensures that the activator is in the path and reachable.</li>
+</ul>
+</li>
+<li><strong>Proxy Mode Activation</strong> (4.1):<!-- -->
+<ul>
+<li>The autoscaler, which initiated the decision to scale to zero, directs the SKS to switch to Proxy mode.</li>
+<li>In Proxy mode, all incoming traffic is routed to the activators.</li>
+</ul>
+</li>
+<li><strong>Public Service Probing</strong>:<!-- -->
+<ul>
+<li>The SKS's public service is probed continuously to ensure it returns responses from the activator.</li>
+<li>Once the public service reliably returns responses from the activator and a configurable grace period (set via scale-to-zero-grace-period) has elapsed,</li>
+</ul>
+</li>
+<li><strong>Final Scaling Down</strong> (5):<!-- -->
+<ul>
+<li>The last pod of the revision is removed, marking the successful scaling down of the revision to zero instances.</li>
+</ul>
+</li>
+</ul>
+<h3 class="anchor anchorWithStickyNavbar_LWe7" id="scaling-from-zero">Scaling from zero<a href="https://wedaa.tech/docs/blog/2024/05/01/knative-serving-01#scaling-from-zero" class="hash-link" aria-label="Direct link to Scaling from zero" title="Direct link to Scaling from zero">​</a></h3>
+<p><img loading="lazy" alt="Scaling from zero" src="https://wedaa.tech/docs/assets/images/06-scaling-from-zero-95be865fd7ac19f2617d836ffb91726b.png" width="770" height="527" class="img_ev3q"></p>
+<ul>
+<li><strong>Scaling Up Process</strong>:<!-- -->
+<ul>
+<li>If a revision is scaled to zero and a request arrives for it, the system needs to scale it up.</li>
+<li>As the SKS is in Proxy mode, the request reaches the activator.</li>
+</ul>
+</li>
+<li><strong>Request Handling</strong>:<!-- -->
+<ul>
+<li>The activator counts the incoming request and reports its appearance to the autoscaler (2.1).</li>
+<li>It then buffers the request and monitors the SKS's private service for endpoints to appear (2.2).</li>
+</ul>
+</li>
+<li><strong>Autoscaling Cycle</strong> (3):<!-- -->
+<ul>
+<li>The autoscaler receives the metric from the activator and initiates an autoscaling cycle.</li>
+<li>This process determines the desired number of pods based on the incoming request.</li>
+</ul>
+</li>
+<li><strong>Scaling Decision</strong> (4):<!-- -->
+<ul>
+<li>The autoscaling process concludes that at least one pod is needed to handle the incoming request.</li>
+</ul>
+</li>
+<li><strong>Scaling Up Instructions</strong> (5.1):<!-- -->
+<ul>
+<li>The autoscaler instructs the revision's deployment to scale up to N &gt; 0 replicas to accommodate the increased demand.</li>
+</ul>
+</li>
+<li><strong>Serve Mode Activation</strong> (5.2):<!-- -->
+<ul>
+<li>The autoscaler switches the SKS into Serve mode, directing traffic to the revision's pods directly once they are up.</li>
+</ul>
+</li>
+<li><strong>Endpoint Probing</strong>:<!-- -->
+<ul>
+<li>The activator monitors the SKS's private service for the appearance of endpoints.</li>
+<li>Once the endpoints come up and pass the probe successfully, the respective address is considered healthy and used to route the buffered request and any additional requests that arrived in the meantime (8.2).</li>
+</ul>
+</li>
+<li><strong>Successful Scaling Up</strong>:<!-- -->
+<ul>
+<li>The revision has successfully scaled up from zero to handle the incoming request.</li>
+</ul>
+</li>
+</ul>
+<h2 class="anchor anchorWithStickyNavbar_LWe7" id="conclusion">Conclusion<a href="https://wedaa.tech/docs/blog/2024/05/01/knative-serving-01#conclusion" class="hash-link" aria-label="Direct link to Conclusion" title="Direct link to Conclusion">​</a></h2>
+<p>In summary, we've explored the core concepts of Knative Serving, from its architecture to scaling mechanisms. Next, we'll dive into practical implementation in our upcoming blog. Also, stay tuned for the integration of the serverless component into the <a href="https://app.wedaa.tech/" target="_blank" rel="noopener noreferrer">WeDAA</a> Platform, making prototyping and deployment faster and easier than ever.</p>]]></content:encoded>
+            <category>microservices</category>
+            <category>architecture</category>
+            <category>cloud-native</category>
+            <category>Serverless</category>
+            <category>cloud computing</category>
+            <category>knative</category>
+            <category>kubernetes</category>
+            <category>Knative-serving</category>
+        </item>
         <item>
             <title><![CDATA[Revolutionizing Software Development with React Flow]]></title>
             <link>https://wedaa.tech/docs/blog/2024/04/25/react-flow</link>
@@ -455,7 +704,8 @@ data stream with declarative event connectivity and developer friendly object mo
 </ul>
 <h2 class="anchor anchorWithStickyNavbar_LWe7" id="conclusion">Conclusion<a href="https://wedaa.tech/docs/blog/2024/04/13/overview-on-knative#conclusion" class="hash-link" aria-label="Direct link to Conclusion" title="Direct link to Conclusion">​</a></h2>
 <p>In this overview, we've explored serverless computing with Knative on Kubernetes, covering core concepts, features, and components. Stay tuned for practical implementations and real-world use cases in upcoming blogs, unlocking Knative's full potential for your projects. With Knative, the future of serverless on Kubernetes is brighter than ever.</p>
-<p>Furthermore, I'm excited to announce that our platform, <a href="https://app.wedaa.tech/" target="_blank" rel="noopener noreferrer">WeDAA</a>, will be hosting these upcoming blogs. WeDAA is committed to providing innovative solutions, and soon, we'll be incorporating serverless capabilities into our platform. Keep an eye out for our future updates, as we continue to evolve and enhance our services to meet your needs.</p>]]></content:encoded>
+<p>Furthermore, I'm excited to announce that our platform, <a href="https://app.wedaa.tech/" target="_blank" rel="noopener noreferrer">WeDAA</a>, will be hosting these upcoming blogs. WeDAA is committed to providing innovative solutions, and soon, we'll be incorporating serverless capabilities into our platform. Keep an eye out for our future updates, as we continue to evolve and enhance our services to meet your needs.</p>
+<p>Continue your exploration of Knative by diving into our next blog on Knative Serving <a href="https://www.wedaa.tech/docs/blog/2024/05/01/knative-serving-01" target="_blank" rel="noopener noreferrer">Definitive Guide to Knative Serving—A Deep Dive into Theory and Architecture</a>!</p>]]></content:encoded>
             <category>microservices</category>
             <category>architecture</category>
             <category>cloud-native</category>

@@ -1,1 +1,0 @@
-"use strict";(self.webpackChunkdocusaurus_documentation=self.webpackChunkdocusaurus_documentation||[]).push([[8541],{3917:s=>{s.exports=JSON.parse('{"label":"knative","permalink":"/docs/blog/tags/knative","allTagsPath":"/docs/blog/tags","count":1,"unlisted":false}')}}]);
