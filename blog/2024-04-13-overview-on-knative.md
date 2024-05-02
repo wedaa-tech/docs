@@ -21,7 +21,7 @@ Imagine you're hosting a dinner party. In a traditional hosting scenario, you'd 
 Now, consider a serverless approach as hiring a catering service for your party. You tell them what you need, and they take care of everything – from cooking the food to setting up and serving. You don't have to worry about the kitchen logistics or cleaning up afterward; you can focus on enjoying the party with your guests. Similarly, in serverless computing, you provide your code, and the cloud provider takes care of the infrastructure, scaling, and management, allowing you to focus on writing and improving your application.
 
 ### Kubernetes-Powered Serverless: Introducing Knative
-![Serverless Framework Knative](//img/blog/dive-into-knative/02-serverless-framework-knative.png)<p align="center">[Serverless Framework Knative](https://www.serverless.com/blog/serverless-framework-knative-component)</p>
+![Serverless Framework Knative](/img/blog/dive-into-knative/02-serverless-framework-knative.png)<p align="center">[Serverless Framework Knative](https://www.serverless.com/blog/serverless-framework-knative-component)</p>
 
 
 
@@ -128,3 +128,5 @@ General areas of application are:
 In this overview, we've explored serverless computing with Knative on Kubernetes, covering core concepts, features, and components. Stay tuned for practical implementations and real-world use cases in upcoming blogs, unlocking Knative's full potential for your projects. With Knative, the future of serverless on Kubernetes is brighter than ever.
 
 Furthermore, I'm excited to announce that our platform, [WeDAA](https://app.wedaa.tech/), will be hosting these upcoming blogs. WeDAA is committed to providing innovative solutions, and soon, we'll be incorporating serverless capabilities into our platform. Keep an eye out for our future updates, as we continue to evolve and enhance our services to meet your needs.
+
+Continue your exploration of Knative by diving into our next blog on Knative Serving [Definitive Guide to Knative Serving—A Deep Dive into Theory and Architecture](https://www.wedaa.tech/docs/blog/2024/05/01/knative-serving-01)!
