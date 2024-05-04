@@ -2,11 +2,47 @@
 <feed xmlns="http://www.w3.org/2005/Atom">
     <id>https://wedaa.tech/docs/blog</id>
     <title>WeDAA Blog</title>
-    <updated>2024-05-01T00:00:00.000Z</updated>
+    <updated>2024-05-05T00:00:00.000Z</updated>
     <generator>https://github.com/jpmonette/feed</generator>
     <link rel="alternate" href="https://wedaa.tech/docs/blog"/>
     <subtitle>WeDAA Blog</subtitle>
     <icon>https://wedaa.tech/docs/img/logo.png</icon>
+    <entry>
+        <title type="html"><![CDATA[Bulkhead Pattern -> Cell based architecture]]></title>
+        <id>https://wedaa.tech/docs/blog/2024/05/05/Bulkhead-Pattern</id>
+        <link href="https://wedaa.tech/docs/blog/2024/05/05/Bulkhead-Pattern"/>
+        <updated>2024-05-05T00:00:00.000Z</updated>
+        <summary type="html"><![CDATA[Understanding cell based architecture]]></summary>
+        <content type="html"><![CDATA[<h2 class="anchor anchorWithStickyNavbar_LWe7" id="cell-based-architecture">Cell based architecture<a href="https://wedaa.tech/docs/blog/2024/05/05/Bulkhead-Pattern#cell-based-architecture" class="hash-link" aria-label="Direct link to Cell based architecture" title="Direct link to Cell based architecture">​</a></h2>
+<p><img loading="lazy" alt="Cell based architecture" src="https://wedaa.tech/docs/assets/images/00-cell-based-architecture-5d2fff7cd24c4d52e1a2d82ffea7183c.png" width="1498" height="1240" class="img_ev3q"></p>
+<p>Bulkhead or Cell-based architecture is an architectural pattern adopted for constructing highly available, scalable, and fault-tolerant enterprise applications.</p>
+<p>The concept of the bulkhead pattern draws inspiration from the architecture of ship hulls, wherein the hull is divided into multiple cells or sections to prevent the entire ship from sinking if one section is damaged.</p>
+<p><img loading="lazy" alt="ship hulls" src="https://wedaa.tech/docs/assets/images/01-ship-hulls-51f991e8f3a7a94a8fd3072b6f8bfaab.png" width="2636" height="1860" class="img_ev3q"></p><p align="center">Vertical Partitioning of Walls dividing the Ship’s hull</p><p></p>
+<p>In the bulkhead architecture approach, ships manage the risk of sinking by isolating compromised compartments. The vertical partitioning of walls divides the ship's interior into self-contained, watertight compartments, aiming to contain a hull breach within a specific section of the ship.</p>
+<p>A similar concept is applied when designing scalable enterprise applications having dynamic workload, known as cell-based architecture.</p>
+<h2 class="anchor anchorWithStickyNavbar_LWe7" id="key-components-of-cell-based-architecture">Key Components of Cell Based Architecture<a href="https://wedaa.tech/docs/blog/2024/05/05/Bulkhead-Pattern#key-components-of-cell-based-architecture" class="hash-link" aria-label="Direct link to Key Components of Cell Based Architecture" title="Direct link to Key Components of Cell Based Architecture">​</a></h2>
+<h3 class="anchor anchorWithStickyNavbar_LWe7" id="cell-router">Cell Router<a href="https://wedaa.tech/docs/blog/2024/05/05/Bulkhead-Pattern#cell-router" class="hash-link" aria-label="Direct link to Cell Router" title="Direct link to Cell Router">​</a></h3>
+<p><img loading="lazy" alt="Cell Router" src="https://wedaa.tech/docs/assets/images/02-cell-router-9983f6c0a85397a40cb6f96aba2c0a96.png" width="501" height="310" class="img_ev3q"></p>
+<p>A cell router is a key component in a cell-based architecture. Traffic to every individual cell is routed through cell router. If a cell fails, only the traffic directed to that cell will be impacted. In short impact on the system will be minimal. The cell router is responsible for receiving the request, determining their destination based on cell partitioning algorithms, and then forwarding them towards the destination cell.</p>
+<h3 class="anchor anchorWithStickyNavbar_LWe7" id="blast-radius">Blast Radius<a href="https://wedaa.tech/docs/blog/2024/05/05/Bulkhead-Pattern#blast-radius" class="hash-link" aria-label="Direct link to Blast Radius" title="Direct link to Blast Radius">​</a></h3>
+<p><img loading="lazy" alt="Blast Radius" src="https://wedaa.tech/docs/assets/images/03-blast-radius-57c403b1bf263a7900a54287f42e06e6.png" width="451" height="501" class="img_ev3q"></p>
+<p>Represents the area or range of systems, components, or processes that may be affected directly or indirectly by a single cell failure event. For example, if a system is built with four cells and any service in a cell goes down only the 25% of traffic will be affected. So, the blast radius is approximate 25% here.</p>
+<h3 class="anchor anchorWithStickyNavbar_LWe7" id="traffic-distribution">Traffic distribution<a href="https://wedaa.tech/docs/blog/2024/05/05/Bulkhead-Pattern#traffic-distribution" class="hash-link" aria-label="Direct link to Traffic distribution" title="Direct link to Traffic distribution">​</a></h3>
+<p>Cell router plays a critical role in orchestrating traffic distribution among cells in cell-based architecture. Traffic distribution works by routing incoming requests to the appropriate cell or service instance based on predefined routing rules or policies. The cells get partitioned using a partition key. A simple or composite partition key can be used to distribute the traffic between cells. the partitioning strategy could be ranging partitioning, hash partitioning, or list partitioning. The chosen partitioning strategy will influence how the partition key is used to distribute traffic across partitions.</p>
+<h3 class="anchor anchorWithStickyNavbar_LWe7" id="self-contained-unit-cell">Self-Contained Unit (Cell)<a href="https://wedaa.tech/docs/blog/2024/05/05/Bulkhead-Pattern#self-contained-unit-cell" class="hash-link" aria-label="Direct link to Self-Contained Unit (Cell)" title="Direct link to Self-Contained Unit (Cell)">​</a></h3>
+<p><img loading="lazy" alt="Self-Contained Unit (Cell)" src="https://wedaa.tech/docs/assets/images/04-cell-ba18e4122c00ec21541821b01f2a3969.png" width="291" height="491" class="img_ev3q"></p>
+<p>Complete in itself modules are the first-class citizen of any cell-based architecture. Such modules are the one which serves the logical / business purpose of a feature or service along with non-functional entities around it. Such as API’s, load balancer and database. In short, a cell in a cell-based architecture is self-contained and self- sustainable instance of an application which can be deployed, scaled, and observed independently. Cells are isolated with each other at logical level, failure of a cell does not affect other cells and reduces the overall impact to software. With the cell-based architecture a cell does not share encompassed services state with other cells in the system.</p>
+<h3 class="anchor anchorWithStickyNavbar_LWe7" id="cell-health-check">Cell Health Check<a href="https://wedaa.tech/docs/blog/2024/05/05/Bulkhead-Pattern#cell-health-check" class="hash-link" aria-label="Direct link to Cell Health Check" title="Direct link to Cell Health Check">​</a></h3>
+<p>Before forwarding the request, the cell router layer may perform health checks on the target cell or service instance to ensure that cell can handle the request. If the target instance is unhealthy or unavailable, the router may reroute the request to a healthy cell or trigger automatic recovery mechanisms.</p>
+<h3 class="anchor anchorWithStickyNavbar_LWe7" id="database-replication">Database Replication<a href="https://wedaa.tech/docs/blog/2024/05/05/Bulkhead-Pattern#database-replication" class="hash-link" aria-label="Direct link to Database Replication" title="Direct link to Database Replication">​</a></h3>
+<p><img loading="lazy" alt="Database Replication" src="https://wedaa.tech/docs/assets/images/05-db-replication-cc85114ba7117e769c5fb6795a8f59b6.png" width="1999" height="1143" class="img_ev3q"></p>
+<p>In cell-based architecture Database replication is used to synchronize data between cells to ensure consistency and availability. Changes made to data in one cell need to be propagated to other cells where that data is relevant. Replication mechanisms vary based on the specific database technology used, but they involve replicating data changes asynchronously or semi-synchronously between cells.</p>
+<h2 class="anchor anchorWithStickyNavbar_LWe7" id="when-to-use-cell-based-architecture">When to use Cell Based Architecture?<a href="https://wedaa.tech/docs/blog/2024/05/05/Bulkhead-Pattern#when-to-use-cell-based-architecture" class="hash-link" aria-label="Direct link to When to use Cell Based Architecture?" title="Direct link to When to use Cell Based Architecture?">​</a></h2>
+<p>For systems that require high scalability and the ability to handle large volumes of traffic, cell-based architecture allows for horizontal scaling by adding more cells as needed.</p>
+<p>Applications with dynamic workloads that require rapid scaling up or down based on demand, cell-based architecture provides the flexibility to scale individual cells independently, optimizing resource utilization.</p>]]></content>
+        <category label="microservices" term="microservices"/>
+        <category label="architecture" term="architecture"/>
+    </entry>
     <entry>
         <title type="html"><![CDATA[Definitive Guide to Knative Serving—A Deep Dive into Theory and Architecture]]></title>
         <id>https://wedaa.tech/docs/blog/2024/05/01/knative-serving-01</id>

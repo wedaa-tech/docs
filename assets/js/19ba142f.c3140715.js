@@ -1,0 +1,1 @@
+"use strict";(self.webpackChunkdocusaurus_documentation=self.webpackChunkdocusaurus_documentation||[]).push([[1991],{3269:s=>{s.exports=JSON.parse('{"label":"architecture","permalink":"/docs/blog/tags/architecture","allTagsPath":"/docs/blog/tags","count":6,"unlisted":false}')}}]);
