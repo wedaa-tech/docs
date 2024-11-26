@@ -54,7 +54,7 @@ html[data-theme='dark'] .header-github-link:before {
 }
 
 .markdown h1:first-child {
-  --ifm-h1-font-size: 2.3rem;
+  --ifm-h1-font-size: 1.3rem;
 }
 .card__description {
   font-size: 40px;
@@ -73,15 +73,23 @@ html[data-theme='dark'] .header-github-link:before {
 
 
 .hero__title {
-  font-size: 2.25rem;
+  font-size: 1.75rem;
   margin: 0%;
 }
 
 .hero__subtitle {
-  font-size: 1.25rem;
+  font-size: 2.25rem;
 }
 
 .hero__image {
   display: none;
   justify-content: center;
+}
+
+.box {
+  background-color: #fffbf5; /* Light gray with a subtle tone */
+  border: 1px solid #dac5a2; /* Soft gray border for better contrast */
+  padding: 10px; /* Add space inside the box for content */
+  border-radius: 8px; /* Rounded corners for a modern look */
+  box-shadow: 0px 2px 4px rgba(0, 0, 0, 0.1); /* Optional shadow for depth */
 }

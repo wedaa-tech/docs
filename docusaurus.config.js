@@ -59,12 +59,12 @@ module.exports = {
       logo: {
         alt: 'WeDAA Logo',
         src: 'img/logo.png',
-        href: '/introduction/what-is-wedaa'
+        href: '/introduction/Introduction to WeDAA'
       },   
       items: [
         {
           type: 'doc',
-          docId: 'introduction/what-is-wedaa',
+          docId: 'introduction/Introduction to WeDAA',
           position: 'left',
           label: 'Documentation',
         },

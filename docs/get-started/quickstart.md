@@ -1,8 +1,213 @@
 # QuickStart
-WeDAA QuickStart wizard drives the user to build simple full-stack microservices application architecture.
 
-To get started, visit our website by [Clicking here](https://app.wedaa.tech). You can access the QuickStart wizard from Canvas dropdown on header.
+The simplest way to get started with WeDAA is by using the **WeDAA QuickStart wizard**, designed to guide users in building a straightforward full-stack application with microservice architecture.
 
-## Accessing QuickStart wizard
+<div class="box">
+    This guide will help you in building your first full-stack application with microservices architecture.
+</div>
+<br/>
+To begin, visit our website by [Clicking here](https://app.wedaa.tech). 
 
-![WeDAA QuickStart](/img/quickstart.png)
+---
+
+### QuickStart wizard
+
+<div class="box">
+  **WeDAA QuickStart wizard** comes with options to generate application of different architecture type: Fullstack, Headless, Static Web Page, Personal Website
+</div>
+<br/>
+
+Let's start building a fullstack application with **WeDAA QuickStart wizard**
+
+Access WeDAA QuickStart wizard
+
+![WeDAA QuickStart](/img/quickstart/quickstart.png)
+
+![WeDAA QuickStart Landing](/img/quickstart/quickstart_landing.png)
+
+### 1. Select application Scope
+
+Let's select the application scope as Fullstack application. **Click Next**
+
+![WeDAA QuickStart Landing](/img/quickstart/quickstart_app_scope.png)
+
+### 2. Select application frontend
+
+Select the React as frontend framework of your application. **Click Next**
+
+![WeDAA QuickStart Landing](/img/quickstart/quickstart_frontend.png)
+
+### 3. Select application backend
+
+Select the Spring as backend framework of your application. **Click Next**
+
+![WeDAA QuickStart Landing](/img/quickstart/quickstart_backend.png)
+
+### 4. Select application database
+
+Let's select the Postgresql as application database. **Click Next**
+
+![WeDAA QuickStart Landing](/img/quickstart/quickstart_database.png)
+
+### 5. Select Authentication & Autherization
+
+Authentication Provider is an optional choice. Let's select Keycloak and **Click Next**
+
+![WeDAA QuickStart Landing](/img/quickstart/quickstart_auth.png)
+
+### 6. Select discovery service
+
+Service discovery is also an optional choice. Let's select Eureka as discovery server. **Click Next** 
+
+![WeDAA QuickStart Landing](/img/quickstart/quickstart_service_discovery.png)
+
+### 7. Select observability framework
+
+Log Management and Observability is also an optional choice. Let's select ECK as log management an observability server. **Click Next** 
+
+![WeDAA QuickStart Landing](/img/quickstart/quickstart_log_management.png)
+
+### 8. Application composition
+
+Project composition page lists all the components used for building fullstack comprehensive architecture application. **Click Next**
+
+![WeDAA QuickStart Landing](/img/quickstart/quickstart_go_to_canvas.png)
+
+### 9. Application architecture
+
+Application architecture rendered over WeDAA canvas. Canvas allows to compose and edit application architecture for advance users **Click Next**
+
+![WeDAA QuickStart Landing](/img/quickstart/quickstart_app_architecture.png)
+
+### 10. Application review
+
+On application review page you can review your application components and respective configurations. **Click Next** & then **Generate Code**
+
+![WeDAA QuickStart Landing](/img/quickstart/quickstart_architecture_review.png)
+
+### 10. Generate Code
+
+WeDAA platform comes with multiple options to generate code for an application. Default selection is None with which will generated application can be run in local. Select None and **Click Generate Code**
+
+![WeDAA QuickStart Landing](/img/quickstart/quickstart_generatecode_iaac.png)
+
+
+![WeDAA QuickStart Landing](/img/quickstart/quickstart_prototype_inprogress.png)
+
+### 10. Application building in progress
+
+Under prototype page you can find the code generation in progress. 
+
+![WeDAA QuickStart Landing](/img/quickstart/quickstart_code_generation_inprogress.png)
+
+### 11. Download Application code
+
+Fullstack application build with WeDAA Quick Start wizard is available under Prototypes. Click over Download icon to get the code.
+
+![WeDAA QuickStart Landing](/img/quickstart/quickstart_code_download.png)
+
+### 12. Running fullstack application
+
+##### 1. Download and extract the application files to the desired location
+<div class="box">
+    The root of the application folder contains the HOW_TO_RUN file, which provides a brief overview of the common prerequisites for running the application and outlines the sequence in which the services should be started.
+</div>
+<br/>    
+
+### Application Prerequisites
+
+<div class="box">
+    - Node version    >= 18
+    - npm version     >= 9.6
+    - docker version  >= 24
+    - jdk/jre version >= 17
+</div>
+<br/>  
+
+##### 2. Let's look at the sequence in which services must be started
+
+![WeDAA QuickStart Landing](/img/application_images/application_how_to_do.png)
+
+<div class="box">
+    For every component of the application there is component level README file generated by WeDAA to help user how to run the service.
+</div>
+<br/>
+
+### Running backendone java service
+- Navigate to the Root directory of backendone
+
+    - Start the postgres Database: **`npm run docker:db:up`**
+    - Build and Run the java service locally: **`./mvnw`**
+--- 
+
+![WeDAA QuickStart Landing](/img/application_images/application_backendone.png)
+
+--- 
+![WeDAA QuickStart Landing](/img/application_images/application_backendone_database.png)
+
+--- 
+![WeDAA QuickStart Landing](/img/application_images/application_backendone_running_status.png)
+
+--- 
+
+
+### Running backendtwo java service
+- Navigate to the Root directory of backendtwo
+
+    - Start the postgres Database: `npm run docker:db:up`
+    - Build and Run the java service locally: `./mvnw`
+
+--- 
+![WeDAA QuickStart Landing](/img/application_images/application_backendtwo.png)
+
+--- 
+![WeDAA QuickStart Landing](/img/application_images/application_backendtwo_database.png)
+
+--- 
+![WeDAA QuickStart Landing](/img/application_images/application_backendtwo_running.png)
+
+--- 
+### Running webapp frontend react service
+- Navigate to the Root directory of webapp
+
+    - Install required dependencies: `npm install`
+    - Run the frontend locally in development mode: `npm start`
+
+--- 
+![WeDAA QuickStart Landing](/img/application_images/application_path_to_webapp.png)
+
+---
+
+<div class="box">
+    If all the services(Backend and Frontend) are running successfully browser must load the following web page.
+</div>
+<br/>
+
+![WeDAA QuickStart Landing](/img/application_images/application_frontend_webpage.png)
+
+<div class="box">
+    Reference commands for the assesment of Services and Troubleshooting
+        - List the all running dockerized services: `docker stats`
+        - Stopping the container service: `docker stop \{container_id\}`
+        - Removing the container service: `docker rm \{container_id\}`
+
+        - Database start: `npm run docker:db:up`
+        - Database stop: `npm run docker:db:down`
+        - Database check: `lsof -i tcp:5432`
+
+        - Test datbase connection: 
+            - Database config details can be found in `postgresql.yml` file of projects `src/main/docker` folder
+![WeDAA QuickStart Landing](/img/application_images/application_database_docker_config.png)
+
+---
+
+![WeDAA QuickStart Landing](/img/application_images/application_databases_running_status.png)
+
+---
+            - Connect to docker container: `docker exec -it backend-postgresql-1 bash`
+            - Connect to database: `psql -h localhost -U backendone`
+            - Listing databases: `\l`
+            - Listing database tables: `\dt`
+            - Query to Notes table: `SELECT * FROM public.note ORDER BY id ASC;`
+</div>
+<br/>
