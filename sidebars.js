@@ -21,7 +21,8 @@ const sidebars = {
         type: 'generated-index',
       },
       items: [
-        'introduction/what-is-wedaa',
+        'introduction/Introduction to WeDAA',
+        'introduction/Why WeDAA',
       ],
     },
     {
@@ -32,8 +33,8 @@ const sidebars = {
       },
       items: [
         'get-started/quickstart',
+        'get-started/ai-wizard',
         'get-started/advance',
-        'get-started/tutorials',
       ],
     },
     {
