@@ -4,21 +4,23 @@ description: How WeDAA Beat Load Balancer Limits Using Kong API Gateway
 image: https://i.imgur.com/kbgl7U1.png
 tags: [microservices, architecture, api gateway, kong gateway, load balancer, hetzner, path based routing, cloud infrastructure, scaling microservices, cloud cost optimization, infrastructure challenges, backend architecture, platform engineering, api management]
 
-date: 2025-04-08
+date: 2025-05-29
 ---
 
 ## Introduction
 
-We're [WeDAA](https://www.wedaa.tech/), a platform built to help developers design, deploy, and scale microservice architectures. Everything was smooth… until it wasn’t. Our cloud provider of choice, Hetzner, gave us an unexpected headache: their load balancers only support five service mappings (yes, just five).
+We're [WeDAA](https://www.wedaa.tech/), short for Well Defined Application Architecture—a platform that empowers developers and architects to visually prototype software architectures on a canvas. Whether you're building enterprise applications, startup MVPs, or incubating new ideas, WeDAA helps you bootstrap non-functional requirements like APIs, microservices, and infrastructure in minutes instead of days.
 
-**Spoiler alert**: Kong API Gateway came to our rescue. Here's the story of how we turned a frustrating infrastructure limit into a smooth, scalable setup.
+Everything was going smoothly—until we hit a hard limit. Our hosting provider, Hetzner, imposed a frustrating restriction: their load balancers only allow five service mappings. For a platform like ours that depends on running dozens of services, this was a serious roadblock.
+
+**Spoiler alert**: Kong API Gateway came to our rescue. Here’s how we turned a rigid infrastructure limitation into a streamlined, scalable solution.
 
 ![WeDAA GATEWAY](/img/blog/kong-apigateway/intro.png)
 
 ## The Backstory: What’s WeDAA Anyway?
 
-#### A Platform for Microservice Architecture
-[WeDAA](https://www.wedaa.tech/) isn’t your typical backend-as-a-service. Think of it as the LEGO set for building microservices. Developers piece together services, APIs, and integrations without worrying about the messy backend orchestration.
+#### A Visual Platform for Modern Architecture
+[WeDAA](https://www.wedaa.tech/) is like a LEGO set for software architecture—developers can visually design, connect, and deploy microservices without the heavy lifting of backend setup. It handles the non-functional groundwork so you can focus on building features.
 
 #### Our Cloud of Choice: Hetzner
 
@@ -131,13 +133,13 @@ Clean, scalable, and way easier to manage.
 ![Hetzner](/img/blog/kong-apigateway/developer.png)
 
 #### Scalability Without Extra Costs
-We’re saving $$$ by not buying extra load balancers.
+- We’re saving $$$ by not buying extra load balancers.
 
 #### Future-Proofing the Platform
-Need to add 10 more services? 50? No problem—Kong’s got it.
+- Need to add 10 more services? 50? No problem—Kong’s got it.
 
 #### Faster Deployments
-New service? Register with Kong, deploy, and done. No port juggling.
+- New service? Register with Kong, deploy, and done. No port juggling.
 
 ## Wrapping Up: Kong API Gateway – Game-Changer in Our Stack
 
