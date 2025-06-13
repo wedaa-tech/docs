@@ -1,0 +1,1 @@
+"use strict";(self.webpackChunkdocusaurus_documentation=self.webpackChunkdocusaurus_documentation||[]).push([[7569],{4601:s=>{s.exports=JSON.parse('{"label":"scaling microservices","permalink":"/docs/blog/tags/scaling-microservices","allTagsPath":"/docs/blog/tags","count":1,"unlisted":false}')}}]);

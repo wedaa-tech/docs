@@ -1,0 +1,1 @@
+"use strict";(self.webpackChunkdocusaurus_documentation=self.webpackChunkdocusaurus_documentation||[]).push([[7298],{1682:s=>{s.exports=JSON.parse('{"label":"cloud infrastructure","permalink":"/docs/blog/tags/cloud-infrastructure","allTagsPath":"/docs/blog/tags","count":1,"unlisted":false}')}}]);

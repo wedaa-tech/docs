@@ -1,0 +1,1 @@
+"use strict";(self.webpackChunkdocusaurus_documentation=self.webpackChunkdocusaurus_documentation||[]).push([[6325],{1729:e=>{e.exports=JSON.parse('{"label":"platform engineering","permalink":"/docs/blog/tags/platform-engineering","allTagsPath":"/docs/blog/tags","count":1,"unlisted":false}')}}]);

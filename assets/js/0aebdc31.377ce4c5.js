@@ -1,0 +1,1 @@
+"use strict";(self.webpackChunkdocusaurus_documentation=self.webpackChunkdocusaurus_documentation||[]).push([[9055],{2645:a=>{a.exports=JSON.parse('{"label":"api management","permalink":"/docs/blog/tags/api-management","allTagsPath":"/docs/blog/tags","count":1,"unlisted":false}')}}]);

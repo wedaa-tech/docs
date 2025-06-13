@@ -1,0 +1,1 @@
+"use strict";(self.webpackChunkdocusaurus_documentation=self.webpackChunkdocusaurus_documentation||[]).push([[171],{8736:o=>{o.exports=JSON.parse('{"label":"cloud cost optimization","permalink":"/docs/blog/tags/cloud-cost-optimization","allTagsPath":"/docs/blog/tags","count":1,"unlisted":false}')}}]);

@@ -1,0 +1,1 @@
+"use strict";(self.webpackChunkdocusaurus_documentation=self.webpackChunkdocusaurus_documentation||[]).push([[3306],{9088:a=>{a.exports=JSON.parse('{"label":"kong gateway","permalink":"/docs/blog/tags/kong-gateway","allTagsPath":"/docs/blog/tags","count":1,"unlisted":false}')}}]);

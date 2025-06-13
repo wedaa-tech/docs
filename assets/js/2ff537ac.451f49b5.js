@@ -1,0 +1,1 @@
+"use strict";(self.webpackChunkdocusaurus_documentation=self.webpackChunkdocusaurus_documentation||[]).push([[8117],{7104:a=>{a.exports=JSON.parse('{"label":"load balancer","permalink":"/docs/blog/tags/load-balancer","allTagsPath":"/docs/blog/tags","count":1,"unlisted":false}')}}]);

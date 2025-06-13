@@ -1,0 +1,1 @@
+"use strict";(self.webpackChunkdocusaurus_documentation=self.webpackChunkdocusaurus_documentation||[]).push([[757],{3822:a=>{a.exports=JSON.parse('{"label":"api gateway","permalink":"/docs/blog/tags/api-gateway","allTagsPath":"/docs/blog/tags","count":1,"unlisted":false}')}}]);

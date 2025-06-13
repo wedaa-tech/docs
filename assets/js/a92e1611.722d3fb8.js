@@ -1,0 +1,1 @@
+"use strict";(self.webpackChunkdocusaurus_documentation=self.webpackChunkdocusaurus_documentation||[]).push([[5613],{330:s=>{s.exports=JSON.parse('{"label":"infrastructure challenges","permalink":"/docs/blog/tags/infrastructure-challenges","allTagsPath":"/docs/blog/tags","count":1,"unlisted":false}')}}]);

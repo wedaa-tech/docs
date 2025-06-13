@@ -1,0 +1,1 @@
+"use strict";(self.webpackChunkdocusaurus_documentation=self.webpackChunkdocusaurus_documentation||[]).push([[5748],{4834:a=>{a.exports=JSON.parse('{"label":"backend architecture","permalink":"/docs/blog/tags/backend-architecture","allTagsPath":"/docs/blog/tags","count":1,"unlisted":false}')}}]);
