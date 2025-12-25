@@ -1,1 +1,0 @@
-"use strict";(self.webpackChunkdocusaurus_documentation=self.webpackChunkdocusaurus_documentation||[]).push([[2940],{6911:s=>{s.exports=JSON.parse('{"label":"kubernetes","permalink":"/docs/blog/tags/kubernetes","allTagsPath":"/docs/blog/tags","count":2,"unlisted":false}')}}]);

@@ -1,0 +1,1 @@
+"use strict";(self.webpackChunkdocusaurus_documentation=self.webpackChunkdocusaurus_documentation||[]).push([[7458],{913:s=>{s.exports=JSON.parse('{"label":"service-mesh","permalink":"/docs/blog/tags/service-mesh","allTagsPath":"/docs/blog/tags","count":1,"unlisted":false}')}}]);

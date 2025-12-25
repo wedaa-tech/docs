@@ -1,0 +1,1 @@
+"use strict";(self.webpackChunkdocusaurus_documentation=self.webpackChunkdocusaurus_documentation||[]).push([[1348],{3685:s=>{s.exports=JSON.parse('{"label":"cloud-architecture","permalink":"/docs/blog/tags/cloud-architecture","allTagsPath":"/docs/blog/tags","count":1,"unlisted":false}')}}]);

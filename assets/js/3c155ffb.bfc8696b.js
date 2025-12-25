@@ -1,0 +1,1 @@
+"use strict";(self.webpackChunkdocusaurus_documentation=self.webpackChunkdocusaurus_documentation||[]).push([[3092],{5683:s=>{s.exports=JSON.parse('{"label":"l4-vs-l7","permalink":"/docs/blog/tags/l-4-vs-l-7","allTagsPath":"/docs/blog/tags","count":1,"unlisted":false}')}}]);
