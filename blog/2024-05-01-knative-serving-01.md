@@ -1,7 +1,7 @@
 ---
 title: Definitive Guide to Knative Serving—A Deep Dive into Theory and Architecture 
 description: A Deep Dive into Theory and Architecture of Knative Serving
-image: https://knative.dev/docs/community/images/knative-audience.svg
+image: https://www.wedaa.tech/docs/img/blog/knative-serving-01/00-overview.png
 tags: [microservices, architecture, cloud-native, Serverless, cloud computing, knative, kubernetes, Knative-serving]
 date: 2024-05-01
 ---
