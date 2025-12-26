@@ -16,7 +16,7 @@ tags:
   - platform-engineering
   - microservices
 
-date: 2025-12-25
+date: 2025-12-26
 ---
 ## Introduction
 
@@ -168,8 +168,9 @@ ALB is fine if:
 But if Istio manages ingress traffic, ALB becomes redundant.
 
 ---
-
 ## Final Recommendation
+
+![End-End Request Flow](/img/blog/ALBvsNLBIstio/request-flow.png)
 
 For Istio on EKS:
 
@@ -178,7 +179,6 @@ For Istio on EKS:
 - ❌ Avoid **ALB + Istio ingress**
 
 ---
-
 ## Key Takeaway
 
 > **A service mesh needs one Layer 7 brain.**  
