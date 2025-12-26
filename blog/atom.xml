@@ -2,7 +2,7 @@
 <feed xmlns="http://www.w3.org/2005/Atom">
     <id>https://wedaa.tech/docs/blog</id>
     <title>WeDAA Blog</title>
-    <updated>2025-12-25T00:00:00.000Z</updated>
+    <updated>2025-12-26T00:00:00.000Z</updated>
     <generator>https://github.com/jpmonette/feed</generator>
     <link rel="alternate" href="https://wedaa.tech/docs/blog"/>
     <subtitle>WeDAA Blog</subtitle>
@@ -11,7 +11,7 @@
         <title type="html"><![CDATA[ALB vs NLB for Istio - Avoiding the Double L7 Trap]]></title>
         <id>https://wedaa.tech/docs/blog/2025/12/24/Avoiding-Double-L7-Trap</id>
         <link href="https://wedaa.tech/docs/blog/2025/12/24/Avoiding-Double-L7-Trap"/>
-        <updated>2025-12-25T00:00:00.000Z</updated>
+        <updated>2025-12-26T00:00:00.000Z</updated>
         <summary type="html"><![CDATA[Understanding L4 vs L7 Load Balancing in a Service Mesh]]></summary>
         <content type="html"><![CDATA[<h2 class="anchor anchorWithStickyNavbar_LWe7" id="introduction">Introduction<a href="https://wedaa.tech/docs/blog/2025/12/24/Avoiding-Double-L7-Trap#introduction" class="hash-link" aria-label="Direct link to Introduction" title="Direct link to Introduction">​</a></h2>
 <p>When running <strong>Istio</strong> on Kubernetes (especially on <strong>AWS EKS</strong>), a common question is:</p>
@@ -119,6 +119,7 @@
 <p>But if Istio manages ingress traffic, ALB becomes redundant.</p>
 <hr>
 <h2 class="anchor anchorWithStickyNavbar_LWe7" id="final-recommendation">Final Recommendation<a href="https://wedaa.tech/docs/blog/2025/12/24/Avoiding-Double-L7-Trap#final-recommendation" class="hash-link" aria-label="Direct link to Final Recommendation" title="Direct link to Final Recommendation">​</a></h2>
+<p><img loading="lazy" alt="End-End Request Flow" src="https://wedaa.tech/docs/assets/images/request-flow-a2b168bb14614faefa8a6eb607a99acf.png" width="1248" height="832" class="img_ev3q"></p>
 <p>For Istio on EKS:</p>
 <ul>
 <li>✅ Use <strong>NLB (Layer 4)</strong></li>

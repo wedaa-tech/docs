@@ -4,7 +4,7 @@
         <title>WeDAA Blog</title>
         <link>https://wedaa.tech/docs/blog</link>
         <description>WeDAA Blog</description>
-        <lastBuildDate>Thu, 25 Dec 2025 00:00:00 GMT</lastBuildDate>
+        <lastBuildDate>Fri, 26 Dec 2025 00:00:00 GMT</lastBuildDate>
         <docs>https://validator.w3.org/feed/docs/rss2.html</docs>
         <generator>https://github.com/jpmonette/feed</generator>
         <language>en</language>
@@ -12,7 +12,7 @@
             <title><![CDATA[ALB vs NLB for Istio - Avoiding the Double L7 Trap]]></title>
             <link>https://wedaa.tech/docs/blog/2025/12/24/Avoiding-Double-L7-Trap</link>
             <guid>https://wedaa.tech/docs/blog/2025/12/24/Avoiding-Double-L7-Trap</guid>
-            <pubDate>Thu, 25 Dec 2025 00:00:00 GMT</pubDate>
+            <pubDate>Fri, 26 Dec 2025 00:00:00 GMT</pubDate>
             <description><![CDATA[Understanding L4 vs L7 Load Balancing in a Service Mesh]]></description>
             <content:encoded><![CDATA[<h2 class="anchor anchorWithStickyNavbar_LWe7" id="introduction">Introduction<a href="https://wedaa.tech/docs/blog/2025/12/24/Avoiding-Double-L7-Trap#introduction" class="hash-link" aria-label="Direct link to Introduction" title="Direct link to Introduction">​</a></h2>
 <p>When running <strong>Istio</strong> on Kubernetes (especially on <strong>AWS EKS</strong>), a common question is:</p>
@@ -120,6 +120,7 @@
 <p>But if Istio manages ingress traffic, ALB becomes redundant.</p>
 <hr>
 <h2 class="anchor anchorWithStickyNavbar_LWe7" id="final-recommendation">Final Recommendation<a href="https://wedaa.tech/docs/blog/2025/12/24/Avoiding-Double-L7-Trap#final-recommendation" class="hash-link" aria-label="Direct link to Final Recommendation" title="Direct link to Final Recommendation">​</a></h2>
+<p><img loading="lazy" alt="End-End Request Flow" src="https://wedaa.tech/docs/assets/images/request-flow-a2b168bb14614faefa8a6eb607a99acf.png" width="1248" height="832" class="img_ev3q"></p>
 <p>For Istio on EKS:</p>
 <ul>
 <li>✅ Use <strong>NLB (Layer 4)</strong></li>
